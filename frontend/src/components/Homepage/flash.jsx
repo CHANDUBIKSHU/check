@@ -9,7 +9,7 @@ export default function FlashNewsScroller() {
   useEffect(() => {
     const fetchFlashnews = async () => {
       try {
-        const res = await fetch("http://localhost:5000/news/flashnew");
+        const res = await fetch("https://check-0f2d.onrender.com/news/flashnew");
         if (res.ok) {
           const data = await res.json();
           // Ensure flashnews is always an array

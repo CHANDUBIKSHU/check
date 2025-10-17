@@ -19,7 +19,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:5000/news/flashnews", {
+        const res = await fetch("https://check-0f2d.onrender.com/news/flashnews", {
           headers,
         });
         if (res.ok) {
@@ -37,7 +37,7 @@ export default function Dashboard() {
   // ------------------ Flashnews Save ------------------
   const saveFlashnews = async () => {
     try {
-      await fetch("http://localhost:5000/news/flashnews", {
+      await fetch("https://check-0f2d.onrender.com/news/flashnews", {
         method: "PUT",
         headers: { ...headers, "Content-Type": "application/json" },
         body: JSON.stringify({ flashnews }),
@@ -57,8 +57,8 @@ export default function Dashboard() {
     if (formImage) formData.append("image", formImage);
 
     const url = editing
-      ? `http://localhost:5000/news/achievements/${editing._id}`
-      : "http://localhost:5000/news/achievements";
+      ? `https://check-0f2d.onrender.com/news/achievements/${editing._id}`
+      : "https://check-0f2d.onrender.com/news/achievements";
     const method = editing ? "PUT" : "POST";
 
     try {
@@ -79,7 +79,7 @@ export default function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/news/achievements/${id}`, {
+      const res = await fetch(`https://check-0f2d.onrender.com/news/achievements/${id}`, {
         method: "DELETE",
         headers,
       });

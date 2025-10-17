@@ -7,7 +7,7 @@ export default function GallerySection() {
 
   // Fetch backend data
   useEffect(() => {
-    fetch("http://localhost:5000/news/achievement") // your backend endpoint
+    fetch("https://check-0f2d.onrender.com/news/achievement") // your backend endpoint
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data.achievements)) {
