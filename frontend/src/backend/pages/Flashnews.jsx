@@ -7,7 +7,7 @@ export default function Flashnews({ token }) {
   useEffect(() => {
     const fetchFlashnews = async () => {
       try {
-        const res = await fetch("http://localhost:5000/news/flashnews", {
+        const res = await fetch("https://check-0f2d.onrender.com/news/flashnews", {
           headers,
         });
         if (res.ok) {
@@ -23,7 +23,7 @@ export default function Flashnews({ token }) {
 
   const saveFlashnews = async () => {
     try {
-      const res = await fetch("http://localhost:5000/news/flashnews", {
+      const res = await fetch("https://check-0f2d.onrender.com/news/flashnews", {
         method: "PUT",
         headers: { ...headers, "Content-Type": "application/json" },
         body: JSON.stringify({ flashnews }),
