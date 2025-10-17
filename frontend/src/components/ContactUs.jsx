@@ -24,7 +24,7 @@ export default function ContactUs() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8 -mt-16 relative z-20">
+      <div className="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8 -mt-16 relative z-20" style={{marginTop:'6px'}}>
         {/* Contact Cards */}
         <ContactCards />
 
@@ -57,9 +57,7 @@ export default function ContactUs() {
           </div>
 
           {/* Right Contact Form */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
-            <ContactForm />
-          </div>
+         
         </div>
       </div>
     </div>
