@@ -7,7 +7,8 @@ import TestimonialSlider from "../../components/Recruitment/TestimonialSlider";
 import CTASection from "../../components/Recruitment/CTASection";
 import Nav from "../../components/nav"
 import Footer from "../../components/Footer";
-
+import WhatsAppButton from "../../components/whatsapp";
+import ChatWidget from "../../components/chatwidget";
 const RecruitmentPage = () => {
   return (
     <div>
@@ -20,7 +21,9 @@ const RecruitmentPage = () => {
      <SplitShowcase/>
      <TestimonialSlider/>
      <CTASection/>
-     <Footer/>
+    <ChatWidget />
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };

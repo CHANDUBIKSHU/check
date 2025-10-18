@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Expertise from "./pages/Expertise";
 import Contact from "./pages/Contact";
@@ -29,7 +29,7 @@ import Scroll from "./scroll"
 function App() {
   return (
     <div>
-      <BrowserRouter>
+ 
          <Scroll>
         <Routes>
           <Route path="/" element={<Homepage />} />
@@ -57,7 +57,6 @@ function App() {
           />
         </Routes>
         </Scroll>
-      </BrowserRouter>
     </div>
   );
 }

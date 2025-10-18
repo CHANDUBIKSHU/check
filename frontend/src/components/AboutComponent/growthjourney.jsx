@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom"
 import {
   TrendingUp,
   Rocket,
@@ -11,6 +12,10 @@ import {
   Star,
   Sparkles,
 } from "lucide-react";
+import In from '../../../public/AboutImg/in.jpg';
+import growth from '../../../public/AboutImg/growth.jpg';
+import team2 from '../../../public/AboutImg/team2.jpg';
+import leader from '../../../public/AboutImg/leader.jpg';
 
 export default function ValuesPage() {
   const [scrollY, setScrollY] = useState(0);
@@ -242,24 +247,24 @@ export default function ValuesPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="/AboutImg/in.jpg"
+                  src={In}
                   alt="Innovation"
                   className="rounded-2xl shadow-xl w-full h-64 object-cover"
                 />
                 <img
-                  src="/AboutImg/growth.jpg"
+                  src={growth}
                   alt="Growth"
                   className="rounded-2xl shadow-xl w-full h-48 object-cover"
                 />
               </div>
               <div className="space-y-4 pt-8">
                 <img
-                  src="/AboutImg/team2.jpg"
+                  src={team2}
                   alt="Teamwork"
                   className="rounded-2xl shadow-xl w-full h-48 object-cover"
                 />
                 <img
-                  src="/AboutImg/leader.jpg"
+                  src={leader}
                   alt="Leadership"
                   className="rounded-2xl shadow-xl w-full h-64 object-cover"
                 />
@@ -381,7 +386,7 @@ export default function ValuesPage() {
             foundation for your future success.
           </p>
           <button className="bg-white text-[#00809D] px-10 py-4 rounded-full text-lg font-bold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-            <a href="/contact">Partner With Us Today</a>
+            <Link to="/contact">Partner With Us Today</Link>
           </button>
         </div>
       </div>

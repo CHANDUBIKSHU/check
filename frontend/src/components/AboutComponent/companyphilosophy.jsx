@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
-import {Link } from "react-router-dom"
+import {Link } from "react-router-dom";
+import train from '../../../public/AboutImg/train.jpg';
+import excellence from '../../../public/AboutImg/excellence.jpg'
+import star from '../../../public/AboutImg/star.jpg'
+import diamond from '../../../public/AboutImg/diamond.jpg';
+import star1 from '../../../public/AboutImg/star1.jpg';
+import agile from '../../../public/AboutImg/agile.jpg';
+import app from '../../../public/AboutImg/app.jpg';
+import expert from '../../../public/AboutImg/expert.jpg';
+import team1 from  '../../../public/AboutImg/team1.jpg'
+import pro from  '../../../public/AboutImg/pro.webp';
 
 export default function B2TechLanding() {
   const [scrollY, setScrollY] = useState(0);
@@ -99,7 +109,7 @@ export default function B2TechLanding() {
                   <div className="relative bg-gradient-to-br from-[#00809D]/20 to-[#0a1f44]/20 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/20 shadow-2xl transform group-hover:scale-[1.02] transition-all duration-500">
                     <div className="aspect-[4/3] rounded-xl lg:rounded-2xl overflow-hidden shadow-xl bg-gray-200">
                       <img
-                        src="/AboutImg/pro.webp"
+                        src={pro}
                         alt="Professional Talent Solutions"
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                       />
@@ -161,7 +171,7 @@ export default function B2TechLanding() {
                     }}
                   >
                     <img
-                      src="/AboutImg/team1.jpg"
+                      src={team1}
                       alt="Team Collaboration"
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
                     />
@@ -300,21 +310,21 @@ export default function B2TechLanding() {
                 description:
                   "Proven experience in navigating niche markets and complex talent needs with precision and strategic insight.",
                 gradient: "from-[#00809D] to-[#0a1f44]",
-                image: "/AboutImg/expert.jpg",
+                image: expert,
               },
               {
                 title: "People-First Approach",
                 description:
                   "We prioritize meaningful relationships and long-term partnerships that create sustainable value for all stakeholders.",
                 gradient: "from-[#0a1f44] to-[#00809D]",
-                image: "/AboutImg/app.jpg",
+                image: app,
               },
               {
                 title: "Agile & Adaptive",
                 description:
                   "We evolve with the market, ensuring you always stay ahead of the curve in a rapidly changing landscape.",
                 gradient: "from-[#00809D] to-cyan-600",
-                image: "/AboutImg/agile.jpg",
+                image: agile,
               },
             ].map((item, idx) => (
               <div
@@ -417,7 +427,7 @@ export default function B2TechLanding() {
                   "B2 Tech Services began with one mission: to connect top talent with the right opportunities. We established ourselves as a trusted recruitment partner.",
                 year: "Phase 1",
                 shapeType: "wave",
-                image: "/AboutImg/excellence.jpg",
+                image: excellence,
               },
               {
                 icon: (
@@ -440,7 +450,7 @@ export default function B2TechLanding() {
                   "Expanded into full-spectrum consulting services, providing strategic workforce planning and organizational development solutions.",
                 year: "Phase 2",
                 shapeType: "triangle",
-                image: "/AboutImg/star.jpg",
+                image: star,
               },
               {
                 icon: (
@@ -463,7 +473,7 @@ export default function B2TechLanding() {
                   "Developed comprehensive talent management, deployment strategies, and end-to-end workforce solutions for enterprise clients.",
                 year: "Phase 3",
                 shapeType: "pentagon",
-                image: "/AboutImg/diamond.jpg",
+                image: diamond,
               },
               {
                 icon: (
@@ -486,7 +496,7 @@ export default function B2TechLanding() {
                   "Launched industry-leading training programs to upskill individuals and teams, future-proofing careers and organizations.",
                 year: "Phase 4",
                 shapeType: "hexagon",
-                image: "/AboutImg/star1.jpg",
+                image: star1,
               },
             ].map((milestone, idx) => (
               <div
@@ -773,22 +783,22 @@ export default function B2TechLanding() {
               <div className="relative bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <img
-                    src="/AboutImg/train.jpg"
+                    src={train}
                     alt="Training"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />
                   <img
-                    src="/AboutImg/excellence.jpg"
+                    src={excellence}
                     alt="Excellence"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />
                   <img
-                    src="/AboutImg/star.jpg"
+                    src={star}
                     alt="Success"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />
                   <img
-                    src="/AboutImg/diamond.jpg"
+                    src={diamond}
                     alt="Growth"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />

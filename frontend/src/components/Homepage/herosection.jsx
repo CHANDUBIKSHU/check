@@ -60,14 +60,16 @@ function Herosection() {
         >
           {/* Left Side Content */}
           <div>
-            <motion.p
-              className="uppercase tracking-wide text-sm text-gray-200 mb-2"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Welcome to B2 Tech Services
-            </motion.p>
+          <motion.p
+  className="uppercase tracking-wide text-sm text-gray-200 mb-2"
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  style={{ fontSize: '30px', fontWeight: '600' }} // increased from 30px → 40px
+>
+  Welcome to <br/>B2 Tech Services
+</motion.p>
+
 
             <motion.h1
               className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#00809D]"

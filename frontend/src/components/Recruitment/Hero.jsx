@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Button from "../common/Button";
 import {Link} from "react-router-dom"
 
+import a1 from '../../../public/AboutImg/1.webp';
+
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#e5f6fb] to-[#d0f0fa] py-14 sm:py-20 md:py-28 px-3 sm:px-5 md:px-8 lg:px-16 xl:px-32">
@@ -37,7 +39,7 @@ const Hero = () => {
         >
           <div className="overflow-hidden rounded-3xl shadow-lg w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
             <img
-              src="/1.webp"
+              src={a1}
               alt="Recruitment Infographic"
               className="w-full h-auto object-cover rounded-3xl"
             />

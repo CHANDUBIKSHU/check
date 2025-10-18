@@ -7,6 +7,7 @@ import { FaStar, FaHandshake, FaNetworkWired, FaRocket, FaBullseye } from "react
 import WhatsAppButton from "../components/whatsapp";
 import ChatWidget from "../components/chatwidget";
 import Footer from "../components/Footer";
+import {Link} from "react-router-dom"
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -216,15 +217,18 @@ export default function B2TechExpertise() {
 
           <motion.div initial={{ opacity: 0, scale: 0.94 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }} className="cta bordered-cta">
             <p className="cta-text">Ready to discuss your exact domain hiring requirements?</p>
-            <motion.a href="/contact" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="cta-btn">
-              <span>📧</span> Contact Me
-            </motion.a>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+      <Link
+        to="/contact"
+        className="cta-btn inline-flex items-center gap-2 px-4 py-2 rounded-2xl bg-blue-600 text-white font-medium hover:bg-blue-700 transition"
+      >
+        <span>📧</span> Contact Me
+      </Link>
+    </motion.div>
           </motion.div>
 
 
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} className="footnote">
-            © {new Date().getFullYear()} B2 Tech Services. All rights reserved.
-          </motion.div>
+        
         </div>
       </footer>
       

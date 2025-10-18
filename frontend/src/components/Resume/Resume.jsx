@@ -62,9 +62,6 @@ export default function ResumeServicesPage() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-[#00809D] rounded-full opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur"></div>
             </a>
-            <a href="#pricing" className="bg-white text-[#0a1f44] px-8 py-4 rounded-full font-semibold text-lg shadow-md hover:shadow-xl transition-all duration-300 border-2 border-[#00809D] hover:bg-[#00809D] hover:text-white">
-              View Pricing
-            </a>
           </div>
         </div>
 

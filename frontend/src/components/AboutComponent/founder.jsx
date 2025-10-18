@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link }from "react-router-dom";
 import {
   Users,
   Target,
@@ -10,6 +11,13 @@ import {
   TrendingUp,
   Handshake,
 } from "lucide-react";
+import ceo from '../../../public/AboutImg/ceo.png';
+import hr from '../../../public/AboutImg/hr.png';
+import pm from '../../../public/AboutImg/pm.png';
+import team2 from '../../../public/AboutImg/team2.jpg';
+import pro from '../../../public/AboutImg/pro.webp';
+import believe from '../../../public/AboutImg/believe.jpg';
+import expert from '../../../public/AboutImg/expert.jpg';
 
 export default function TeamPage() {
   const [hoveredMember, setHoveredMember] = useState(null);
@@ -18,7 +26,7 @@ export default function TeamPage() {
     {
       name: "Hrushikesh Mohapatro",
       role: "Founder & CEO",
-      image: "/AboutImg/ceo.png",
+      image: ceo,
       description:
         "Visionary leader with 15+ years of experience in tech recruitment and business development.",
       highlight: true,
@@ -26,7 +34,7 @@ export default function TeamPage() {
     {
       name: "Jesika",
       role: "HR Director",
-      image: "/AboutImg/hr.png",
+      image: hr,
       description:
         "Expert in talent acquisition and organizational development with a passion for people.",
       highlight: false,
@@ -34,7 +42,7 @@ export default function TeamPage() {
     {
       name: "Aswini",
       role: "Product Manager",
-      image: "/AboutImg/pm.png",
+      image: pm,
       description:
         "Strategic thinker driving innovation and excellence in our recruitment solutions.",
       highlight: false,
@@ -309,7 +317,7 @@ export default function TeamPage() {
               </div>
 
               <button className="bg-[#00809D] hover:bg-[#006b84] text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2">
-                <a href="/contact">Partner With Us</a>
+                <Link to="/contact">Partner With Us</Link>
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>
@@ -318,24 +326,24 @@ export default function TeamPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <img
-                    src="/AboutImg/team2.jpg"
+                    src={team2}
                     alt="Teamwork"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
                   />
                   <img
-                    src="/AboutImg/pro.webp"
+                    src={pro}
                     alt="Meeting"
                     className="rounded-2xl shadow-xl w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="space-y-4 pt-8">
                   <img
-                    src="/AboutImg/believe.jpg"
+                    src={believe}
                     alt="Success"
                     className="rounded-2xl shadow-xl w-full h-48 object-cover transform hover:scale-105 transition-transform duration-300"
                   />
                   <img
-                    src="/AboutImg/expert.jpg"
+                    src={expert}
                     alt="Partnership"
                     className="rounded-2xl shadow-xl w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
                   />

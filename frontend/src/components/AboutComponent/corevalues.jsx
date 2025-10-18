@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 import {
   Eye,
   Lightbulb,
@@ -17,19 +18,27 @@ import {
   Compass,
   Brain,
 } from "lucide-react";
+import vision from  '../../../public/AboutImg/vision.jpg';
+import bus from '../../../public/AboutImg/bus.jpg';
+import job1 from  '../../../public/AboutImg/job1.jpg';
+import found from '../../../public/AboutImg/found.jpg';
+import believe from '../../../public/AboutImg/believe.jpg';
+import become from  '../../../public/AboutImg/become.jpg';
+import business from  '../../../public/AboutImg/business.jpg';
+import profes from '../../../public/AboutImg/profes.jpg';
 
 export default function VisionPage() {
   const [scrollY, setScrollY] = useState(0);
 
   const images = {
-    banner: "/AboutImg/vision.jpg",
-    hero1: "/AboutImg/job1.jpg",
-    hero2: "/AboutImg/bus.jpg",
-    vision: "/AboutImg/found.jpg",
-    believe: "/AboutImg/believe.jpg",
-    become: "/AboutImg/become.jpg",
-    businesses: "/AboutImg/business.jpg",
-    professionals: "/AboutImg/profes.jpg",
+    banner: vision,
+    hero1: job1,
+    hero2: bus,
+    vision: found,
+    believe: believe,
+    become: become,
+    businesses: business,
+    professionals: profes,
     integrity:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop",
     excellence:
@@ -457,7 +466,7 @@ export default function VisionPage() {
 
             <button className="px-10 py-4 bg-[#00809D] text-white rounded-full text-lg font-black shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-3 group">
               <span>
-                <a href="/softwaretraining">Start Your Journey</a>
+                <Link to="/softwareTraining">Start Your Journey</Link>
               </span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
