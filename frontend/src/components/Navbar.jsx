@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 import Flash from "../components/Homepage/flash";
 
 const SERVICES = [
+  "Services",
   "recruitmentService",
   "resumeServices",
   "softwareTraining",
   "uiUxDesignThinking",
   "whatSetsUsApart",
+  "Courses",
 ];
 
 const COMPANY = [

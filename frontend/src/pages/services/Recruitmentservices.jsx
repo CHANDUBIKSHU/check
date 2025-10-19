@@ -16,11 +16,11 @@ const RecruitmentPage = () => {
         <Nav/>
       </div>
      <Hero/>
-     <InfographicStats/>
+     {/* <InfographicStats/>
      <ProcessFlow/>
      <SplitShowcase/>
      <TestimonialSlider/>
-     <CTASection/>
+     <CTASection/> */}
     <ChatWidget />
       <Footer />
       <WhatsAppButton />

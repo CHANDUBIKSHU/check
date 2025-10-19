@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ChevronRight, Users, Sparkles, Target, Brain, PenTool, TestTube, Smartphone, TrendingUp, Clock, Award, Zap, Mail, ArrowRight, Check, Layers, Palette, MousePointer, Grid3x3, Lightbulb, BarChart3, Heart, RefreshCw, DollarSign } from 'lucide-react';
-import {Link} from 'react-router-dom'
+import { ChevronRight, Users, Sparkles, Target, Brain, PenTool, TestTube, Smartphone, TrendingUp, Clock, Award, Zap, Mail, ArrowRight, Check, Layers, Palette, MousePointer, Grid3x3, Lightbulb, BarChart3, Heart, RefreshCw, DollarSign, BookOpen, Briefcase, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const UXTrainingPage = () => {
-  const navigate = useNavigate();
   const [activeCard, setActiveCard] = useState(null);
   const [scrollY, setScrollY] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -25,20 +23,48 @@ const UXTrainingPage = () => {
   }, []);
 
   const learningModules = [
-    { icon: Target, title: "User Research & Persona", color: "from-purple-500 to-pink-500" },
-    { icon: Brain, title: "Information Architecture", color: "from-blue-500 to-cyan-500" },
+    { icon: Target, title: "User Research & Persona Development", color: "from-purple-500 to-pink-500" },
+    { icon: Brain, title: "Information Architecture & Wireframing", color: "from-blue-500 to-cyan-500" },
     { icon: PenTool, title: "Interactive Prototyping", color: "from-green-500 to-emerald-500" },
-    { icon: TestTube, title: "Usability Testing", color: "from-orange-500 to-red-500" },
-    { icon: Layers, title: "Design Tools Mastery", color: "from-indigo-500 to-purple-500" },
-    { icon: Smartphone, title: "Mobile-First Design", color: "from-pink-500 to-rose-500" }
+    { icon: TestTube, title: "Usability Testing & Iteration", color: "from-orange-500 to-red-500" },
+    { icon: Layers, title: "Mastery of Design Tools (Figma, Adobe XD, Sketch & more)", color: "from-indigo-500 to-purple-500" },
+    { icon: Smartphone, title: "Responsive & Mobile-First Design Principles", color: "from-pink-500 to-rose-500" }
   ];
 
   const businessImpact = [
-    { icon: MousePointer, title: "Increase Engagement", value: "87%", description: "Users stay longer with intuitive interfaces" },
-    { icon: TrendingUp, title: "Boost Conversions", value: "3.5x", description: "Seamless journeys drive action" },
-    { icon: RefreshCw, title: "Reduce Bounce", value: "-65%", description: "Easy navigation keeps users" },
-    { icon: Heart, title: "Brand Loyalty", value: "92%", description: "Great UX creates repeat customers" },
-    { icon: DollarSign, title: "Enhanced ROI", value: "4x", description: "Design improvements impact revenue" }
+    { 
+      icon: MousePointer, 
+      title: "Increase User Engagement", 
+      description: "Intuitive interfaces and smooth navigation keep users on your platform longer." 
+    },
+    { 
+      icon: TrendingUp, 
+      title: "Boost Conversions", 
+      description: "A seamless user journey encourages action — whether it's signups, purchases, or inquiries." 
+    },
+    { 
+      icon: RefreshCw, 
+      title: "Reduce Bounce Rates", 
+      description: "When users find what they need easily, they stay." 
+    },
+    { 
+      icon: Heart, 
+      title: "Strengthen Brand Loyalty", 
+      description: "Positive user experiences lead to repeat customers and stronger relationships." 
+    },
+    { 
+      icon: DollarSign, 
+      title: "Enhance ROI", 
+      description: "Every design improvement directly impacts user satisfaction and bottom-line results." 
+    }
+  ];
+
+  const whyChooseUs = [
+    "Industry-driven curriculum",
+    "Real-world projects & portfolios",
+    "Personalized mentorship & feedback",
+    "Flexible formats for colleges, professionals, and enterprises",
+    "End-to-end support from learning to placement"
   ];
 
   return (
@@ -62,76 +88,68 @@ const UXTrainingPage = () => {
         />
       </div>
 
-      {/* Hero Section with Morphing Gradient */}
+      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center space-y-8">
             {/* Floating Badge */}
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-xl px-6 py-3 rounded-full shadow-xl border border-gray-100 animate-bounce mt-8">
-  <Sparkles className="w-5 h-5 text-[#00809D]" />
-  <span className="text-[#0a1f44] font-semibold">UI/UX Design Training</span>
-</div>
+              <Sparkles className="w-5 h-5 text-[#00809D]" />
+              <span className="text-[#0a1f44] font-semibold">UI/UX Design Training</span>
+            </div>
 
-
-            {/* Main Title with Gradient Animation */}
+            {/* Main Title */}
             <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#0a1f44] leading-tight">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#0a1f44] leading-tight">
                 Designing
                 <span className="block bg-gradient-to-r from-[#00809D] via-cyan-500 to-[#00809D] bg-clip-text text-transparent animate-gradient bg-300%">
-                  Experiences
+                  Experiences.
                 </span>
               </h1>
-              <p className="text-2xl md:text-3xl text-gray-600">Empowering Talent.</p>
+              <p className="text-2xl md:text-3xl text-gray-600 font-semibold">Empowering Talent.</p>
+            </div>
+
+            {/* Introduction Text */}
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white/70 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100">
+                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed">
+                  At <strong className="text-[#00809D]">B2 Tech Services</strong>, our UI/UX Design training program is built to prepare individuals and teams to create engaging, user-centric digital experiences. In an era where design defines product success, we ensure our learners are equipped with the skills that matter.
+                </p>
+              </div>
             </div>
 
             {/* Animated CTA Button */}
             <div className="flex justify-center gap-4 pt-8">
-              <Link to='/softwareTraining'>
-              <button className="group relative px-8 py-4 bg-[#00809D] text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-2xl">
-                <span className="relative z-10 flex items-center gap-2">
-                  Start Your Journey
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-[#00809D] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </button></Link>
-            </div>
+  <Link to='./contact'>
+    <button className="group relative px-8 py-4 bg-[#00809D] text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-2xl">
+      <span className="relative z-10 flex items-center gap-2">
+        Start Your Journey
+        <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+      </span>
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-[#00809D] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    </button>
+  </Link>
+</div>
 
-            {/* Floating Stats Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-              {[
-                { label: "Students Trained", value: "5000+", icon: Users },
-                { label: "Success Rate", value: "94%", icon: Award },
-                { label: "Industry Partners", value: "100+", icon: Zap }
-              ].map((stat, i) => (
-                <div 
-                  key={i}
-                  className="bg-white/70 backdrop-blur-xl p-6 rounded-3xl shadow-xl border border-gray-100 hover:scale-105 transition-all duration-300"
-                  style={{ 
-                    animationDelay: `${i * 0.1}s`,
-                    animation: 'fadeInUp 0.8s ease-out forwards'
-                  }}
-                >
-                  <stat.icon className="w-8 h-8 text-[#00809D] mb-3" />
-                  <div className="text-3xl font-bold text-[#0a1f44]">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
-
-       
       </section>
 
-      {/* Learning Modules - Hexagon Grid */}
-      <section className="py-20 px-4">
+      {/* What You'll Learn Section */}
+      <section className="py-16 sm:py-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-[#0a1f44] mb-4">What You'll Master</h2>
-            <p className="text-xl text-gray-600">Interactive learning modules designed for real-world success</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 bg-[#00809D]/10 px-6 py-3 rounded-full mb-4">
+              <BookOpen className="w-5 h-5 text-[#00809D]" />
+              <span className="text-[#00809D] font-semibold">Comprehensive Curriculum</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#0a1f44] mb-4">What You'll Learn</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              Our hands-on, industry-focused training covers all critical aspects of the design process:
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {learningModules.map((module, i) => (
               <div
                 key={i}
@@ -140,9 +158,9 @@ const UXTrainingPage = () => {
                 onMouseLeave={() => setActiveCard(null)}
               >
                 <div className={`
-                  relative h-64 bg-white rounded-3xl shadow-xl overflow-hidden
-                  transform transition-all duration-500 
-                  ${activeCard === i ? 'scale-105 rotate-1' : 'hover:scale-105'}
+                  relative h-full bg-white rounded-3xl shadow-xl overflow-hidden p-6 sm:p-8
+                  transform transition-all duration-500 border-2 border-transparent
+                  ${activeCard === i ? 'scale-105 rotate-1 border-[#00809D]' : 'hover:scale-105 hover:border-[#00809D]/30'}
                 `}>
                   {/* Gradient Background */}
                   <div className={`
@@ -151,97 +169,114 @@ const UXTrainingPage = () => {
                   `} />
                   
                   {/* Content */}
-                  <div className="relative p-8 h-full flex flex-col justify-between">
-                    <div>
+                  <div className="relative h-full flex flex-col">
+                    <div className="flex items-start gap-4 mb-4">
                       <div className={`
-                        w-16 h-16 bg-gradient-to-br ${module.color} 
-                        rounded-2xl flex items-center justify-center mb-4
-                        transform transition-transform duration-300 group-hover:rotate-12
+                        w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${module.color} 
+                        rounded-2xl flex items-center justify-center flex-shrink-0
+                        transform transition-transform duration-300 group-hover:rotate-12 shadow-lg
                       `}>
-                        <module.icon className="w-8 h-8 text-white" />
+                        <module.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                       </div>
-                      <h3 className="text-xl font-bold text-[#0a1f44] mb-2">{module.title}</h3>
+                      {/* Number Badge */}
+                      <div className="w-8 h-8 bg-[#00809D]/10 rounded-full flex items-center justify-center ml-auto">
+                        <span className="text-[#00809D] font-bold text-sm">{i + 1}</span>
+                      </div>
                     </div>
+                    
+                    <h3 className="text-lg sm:text-xl font-bold text-[#0a1f44] mb-3 leading-tight">{module.title}</h3>
                     
                     {/* Hover Effect Line */}
                     <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#00809D] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-                  </div>
-
-                  {/* Number Badge */}
-                  <div className="absolute top-4 right-4 w-8 h-8 bg-[#00809D]/10 rounded-full flex items-center justify-center">
-                    <span className="text-[#00809D] font-bold">{i + 1}</span>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Additional Info */}
+          <div className="mt-12 sm:mt-16 text-center">
+            <div className="inline-block bg-gradient-to-r from-[#0a1f44] to-[#00809D] rounded-3xl px-8 sm:px-12 py-6 sm:py-8 shadow-2xl">
+              <p className="text-lg sm:text-xl font-semibold text-white leading-relaxed">
+                Whether you're a <span className="text-cyan-300">student</span>, <span className="text-cyan-300">corporate team</span>, or <span className="text-cyan-300">independent professional</span>, our customized programs are tailored to your level and learning goals.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Business Impact - Interactive Carousel */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+      {/* Business Impact Section */}
+      <section className="py-16 sm:py-20 px-4 bg-gradient-to-br from-[#0a1f44] to-[#00809D]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#00809D]/10 px-6 py-3 rounded-full mb-4">
-              <Lightbulb className="w-5 h-5 text-[#00809D]" />
-              <span className="text-[#00809D] font-semibold">Business Impact</span>
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg px-6 py-3 rounded-full mb-4 border border-white/20">
+              <Lightbulb className="w-5 h-5 text-cyan-300" />
+              <span className="text-white font-semibold">Business Impact</span>
             </div>
-            <h2 className="text-5xl font-bold text-[#0a1f44] mb-4">How UX Design Drives Growth</h2>
-            <p className="text-xl text-gray-600">Measurable results that transform businesses</p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">How UX Design Drives Business Growth</h2>
+            <p className="text-lg sm:text-xl text-cyan-100 max-w-3xl mx-auto leading-relaxed mb-8">
+              Great design isn't just about aesthetics — it's about functionality, usability, and business impact.
+            </p>
+            <p className="text-xl sm:text-2xl text-white font-semibold">
+              Here's how UX design can transform your business:
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             {/* Impact Cards */}
-            <div className="space-y-4">
+            <div className="space-y-4 sm:space-y-6">
               {businessImpact.map((impact, i) => (
                 <div
                   key={i}
                   className={`
-                    p-6 rounded-2xl cursor-pointer transition-all duration-300
+                    p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 border-2
                     ${selectedBenefit === i 
-                      ? 'bg-gradient-to-r from-[#00809D]/10 to-cyan-500/10 shadow-xl scale-105' 
-                      : 'bg-white shadow-lg hover:shadow-xl'
+                      ? 'bg-white shadow-2xl scale-105 border-cyan-300' 
+                      : 'bg-white/10 backdrop-blur-lg shadow-lg hover:shadow-xl border-white/20 hover:bg-white/20'
                     }
                   `}
                   onClick={() => setSelectedBenefit(i)}
                 >
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-start gap-4 sm:gap-6">
                     <div className={`
-                      w-14 h-14 rounded-xl flex items-center justify-center
+                      w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center flex-shrink-0
                       ${selectedBenefit === i 
                         ? 'bg-gradient-to-br from-[#00809D] to-cyan-500' 
-                        : 'bg-gray-100'
+                        : 'bg-white/10'
                       }
-                      transition-all duration-300
+                      transition-all duration-300 shadow-lg
                     `}>
-                      <impact.icon className={`w-7 h-7 ${selectedBenefit === i ? 'text-white' : 'text-[#00809D]'}`} />
+                      <impact.icon className={`w-6 h-6 sm:w-7 sm:h-7 ${selectedBenefit === i ? 'text-white' : 'text-cyan-300'}`} />
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-baseline gap-3 mb-1">
-                        <h3 className="text-lg font-bold text-[#0a1f44]">{impact.title}</h3>
-                        <span className="text-2xl font-bold text-[#00809D]">{impact.value}</span>
+                      <div className="flex items-start justify-between gap-3 mb-2">
+                        <h3 className={`text-lg sm:text-xl font-bold leading-tight ${selectedBenefit === i ? 'text-[#0a1f44]' : 'text-white'}`}>
+                          ✅ {impact.title}
+                        </h3>
+                        <Check className={`
+                          w-6 h-6 flex-shrink-0
+                          ${selectedBenefit === i ? 'text-[#00809D] opacity-100' : 'text-cyan-300 opacity-0'}
+                          transition-opacity duration-300
+                        `} />
                       </div>
-                      <p className="text-gray-600">{impact.description}</p>
+                      <p className={`text-sm sm:text-base leading-relaxed ${selectedBenefit === i ? 'text-gray-700' : 'text-cyan-100'}`}>
+                        {impact.description}
+                      </p>
                     </div>
-                    <Check className={`
-                      w-6 h-6 text-[#00809D] 
-                      ${selectedBenefit === i ? 'opacity-100' : 'opacity-0'}
-                      transition-opacity duration-300
-                    `} />
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Visual Display */}
-            <div className="relative h-96 bg-gradient-to-br from-[#00809D]/5 to-cyan-500/5 rounded-3xl p-8 overflow-hidden">
+            <div className="relative h-80 sm:h-96 bg-white/10 backdrop-blur-lg rounded-3xl p-6 sm:p-8 overflow-hidden border border-white/20">
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-64 h-64">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64">
                   {/* Animated Circles */}
                   {[...Array(3)].map((_, i) => (
                     <div
                       key={i}
-                      className="absolute inset-0 border-2 border-[#00809D]/20 rounded-full"
+                      className="absolute inset-0 border-2 border-cyan-300/30 rounded-full"
                       style={{
                         animation: `pulse ${2 + i}s ease-in-out infinite`,
                         animationDelay: `${i * 0.5}s`
@@ -251,8 +286,8 @@ const UXTrainingPage = () => {
                   
                   {/* Center Icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-gradient-to-br from-[#00809D] to-cyan-500 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
-                      <BarChart3 className="w-16 h-16 text-white" />
+                    <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-3xl flex items-center justify-center shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
+                      <BarChart3 className="w-12 h-12 sm:w-16 sm:h-16 text-white" />
                     </div>
                   </div>
                 </div>
@@ -262,7 +297,7 @@ const UXTrainingPage = () => {
               {businessImpact.map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-3 h-3 bg-[#00809D]/30 rounded-full"
+                  className="absolute w-3 h-3 bg-cyan-300/40 rounded-full"
                   style={{
                     top: `${20 + i * 15}%`,
                     left: `${10 + i * 20}%`,
@@ -276,21 +311,31 @@ const UXTrainingPage = () => {
         </div>
       </section>
 
-      {/* Why Choose Us - Bento Grid */}
-      <section className="py-20 px-4">
+      {/* Why Choose Us Section */}
+      <section className="py-16 sm:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-[#0a1f44] mb-4">Why B2 Tech Services?</h2>
-            <p className="text-xl text-gray-600">Excellence in every aspect of your learning journey</p>
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 bg-[#00809D]/10 px-6 py-3 rounded-full mb-4">
+              <Award className="w-5 h-5 text-[#00809D]" />
+              <span className="text-[#00809D] font-semibold">Excellence in Training</span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#0a1f44] mb-4">
+              Why Choose B2 Tech Services for UI/UX Training?
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600">
+              Excellence in every aspect of your learning journey
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Large Feature Card */}
-            <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-[#00809D] to-cyan-600 p-8 rounded-3xl text-white relative overflow-hidden group">
+            <div className="md:col-span-2 lg:col-span-2 bg-gradient-to-br from-[#00809D] to-cyan-600 p-6 sm:p-8 rounded-3xl text-white relative overflow-hidden group">
               <div className="relative z-10">
-                <Grid3x3 className="w-12 h-12 mb-4" />
-                <h3 className="text-3xl font-bold mb-4">Industry-Driven Curriculum</h3>
-                <p className="text-lg opacity-90 mb-6">Learn what matters in the real world. Our curriculum is crafted with input from leading design teams.</p>
+                <Grid3x3 className="w-10 h-10 sm:w-12 sm:h-12 mb-4" />
+                <h3 className="text-2xl sm:text-3xl font-bold mb-4">Industry-driven curriculum</h3>
+                <p className="text-base sm:text-lg opacity-90 mb-6 leading-relaxed">
+                  Learn what matters in the real world. Our curriculum is crafted with input from leading design teams and continuously updated to reflect industry standards.
+                </p>
                 <div className="flex flex-wrap gap-3">
                   {["Figma", "Adobe XD", "Sketch", "Prototyping"].map((skill) => (
                     <span key={skill} className="px-4 py-2 bg-white/20 backdrop-blur rounded-full text-sm font-medium">
@@ -302,59 +347,69 @@ const UXTrainingPage = () => {
               <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
             </div>
 
-            {/* Smaller Feature Cards */}
-            <div className="bg-white shadow-xl rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
+            {/* Feature Cards */}
+            <div className="bg-white shadow-xl rounded-3xl p-6 sm:p-8 border-2 border-gray-100 hover:shadow-2xl hover:border-[#00809D] transition-all duration-300">
               <Palette className="w-10 h-10 text-[#00809D] mb-4" />
-              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">Real Projects</h3>
-              <p className="text-gray-600">Build a portfolio that speaks volumes</p>
+              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">Real-world projects & portfolios</h3>
+              <p className="text-gray-600 leading-relaxed">Build a portfolio that speaks volumes to potential employers</p>
             </div>
 
-            <div className="bg-white shadow-xl rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white shadow-xl rounded-3xl p-6 sm:p-8 border-2 border-gray-100 hover:shadow-2xl hover:border-[#00809D] transition-all duration-300">
               <Users className="w-10 h-10 text-[#00809D] mb-4" />
-              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">Personalized Mentorship</h3>
-              <p className="text-gray-600">1-on-1 guidance from industry experts</p>
+              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">Personalized mentorship & feedback</h3>
+              <p className="text-gray-600 leading-relaxed">1-on-1 guidance from industry experts throughout your journey</p>
             </div>
 
-            <div className="bg-white shadow-xl rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white shadow-xl rounded-3xl p-6 sm:p-8 border-2 border-gray-100 hover:shadow-2xl hover:border-[#00809D] transition-all duration-300">
               <Clock className="w-10 h-10 text-[#00809D] mb-4" />
-              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">Flexible Formats</h3>
-              <p className="text-gray-600">Learn at your pace, your way</p>
+              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">Flexible formats</h3>
+              <p className="text-gray-600 leading-relaxed">For colleges, professionals, and enterprises - learn at your pace, your way</p>
             </div>
 
-            <div className="bg-white shadow-xl rounded-3xl p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300">
-              <Award className="w-10 h-10 text-[#00809D] mb-4" />
-              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">Placement Support</h3>
-              <p className="text-gray-600">From learning to landing your dream job</p>
+            <div className="bg-white shadow-xl rounded-3xl p-6 sm:p-8 border-2 border-gray-100 hover:shadow-2xl hover:border-[#00809D] transition-all duration-300">
+              <GraduationCap className="w-10 h-10 text-[#00809D] mb-4" />
+              <h3 className="text-xl font-bold text-[#0a1f44] mb-2">End-to-end support</h3>
+              <p className="text-gray-600 leading-relaxed">From learning to placement - we support your entire journey</p>
+            </div>
+          </div>
+
+          {/* Summary Statement */}
+          <div className="mt-12 sm:mt-16 text-center">
+            <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#0a1f44] to-[#00809D] rounded-3xl p-8 sm:p-12 shadow-2xl">
+              <p className="text-2xl sm:text-3xl font-bold text-white leading-relaxed mb-4">
+                Empower your career. Elevate your products.
+              </p>
+              <p className="text-xl sm:text-2xl text-cyan-100 leading-relaxed">
+                Invest in design that delivers — with <span className="text-white font-bold">B2 Tech Services.</span>
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-16 sm:py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-[#0a1f44] to-[#00809D] rounded-3xl p-12 text-center relative overflow-hidden">
+          <div className="bg-gradient-to-r from-[#0a1f44] to-[#00809D] rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 text-cyan-300 mx-auto mb-6 animate-pulse" />
+              
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Career?
               </h2>
-              <p className="text-xl text-white/90 mb-8">
+              <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
                 Join thousands who've launched successful design careers with us
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link to='/contact'>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
                 <button className="group px-8 py-4 bg-white text-[#00809D] font-bold rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl flex items-center gap-2">
                   <Mail className="w-5 h-5" />
                   Contact Us Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                </Link>
-                <div className="text-white">
-                  <p className="text-sm opacity-80">Get in touch</p>
-                  <p className="font-semibold">hrushikesh@b2techservices.in</p>
-                </div>
               </div>
+
+              
             </div>
 
             {/* Animated Background Pattern */}
