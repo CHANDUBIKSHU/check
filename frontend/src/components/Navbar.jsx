@@ -163,7 +163,7 @@ const Navbar = () => {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ${
-                openDropdown === "services" ? "max-h-[300px] mt-2" : "max-h-0"
+                openDropdown === "services" ? "max-h-[600px] mt-2" : "max-h-0"
               }`}
             >
               <ul className="bg-gradient-to-br from-indigo-800 via-purple-800 to-pink-800 backdrop-blur-md rounded-lg border border-white/30">
