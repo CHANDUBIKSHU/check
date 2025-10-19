@@ -11,9 +11,9 @@ const SERVICES = [
 ];
 
 const COMPANY = [
-  "companyPhilosophy",
+  "CompanyPhilosophy",
   "coreValues",
-  "foundersVision",
+  "FoundersVision",
   "growthJourney",
 ];
 
