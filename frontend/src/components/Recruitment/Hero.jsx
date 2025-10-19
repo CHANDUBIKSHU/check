@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Target, Users, Award, Zap, TrendingUp, CheckCircle, Star, Rocket, Shield, Heart, Sparkles } from "lucide-react";
 
 // Button Component (replace with your actual Button import)
@@ -38,9 +39,9 @@ const AboutPage = () => {
             <p className="text-sm sm:text-base md:text-lg text-gray-700">
               At B2 Tech Services, we don't just recruit — We build futures. We drive transformation.
             </p>
-            <Button className="px-5 py-2 sm:px-6 sm:py-3 text-base sm:text-lg md:text-xl rounded-full">
+            <Link to='/Expertise'><Button className="px-5 py-2 sm:px-6 sm:py-3 text-base sm:text-lg md:text-xl rounded-full">
               Get Started
-            </Button>
+            </Button></Link>
           </motion.div>
           
           {/* Image with Rounded & Curved Frame */}
@@ -380,6 +381,7 @@ const AboutPage = () => {
           <p className="mb-6 sm:mb-8 text-base sm:text-lg md:text-xl">
             Let's make recruitment faster, smarter, and success-driven.
           </p>
+<Link to='/Contact'>
 
           <Button
             className="px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg md:text-xl font-semibold rounded-full transition-colors duration-300"
@@ -387,6 +389,7 @@ const AboutPage = () => {
           >
             Contact Us Today
           </Button>
+</Link>
         </motion.div>
       </section>
 

@@ -120,7 +120,7 @@ const UXTrainingPage = () => {
 
             {/* Animated CTA Button */}
             <div className="flex justify-center gap-4 pt-8">
-  <Link to='./contact'>
+  <Link to='/contact'>
     <button className="group relative px-8 py-4 bg-[#00809D] text-white font-semibold rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 shadow-2xl">
       <span className="relative z-10 flex items-center gap-2">
         Start Your Journey
@@ -402,11 +402,12 @@ const UXTrainingPage = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
+               <Link to='/contact'>
                 <button className="group px-8 py-4 bg-white text-[#00809D] font-bold rounded-2xl hover:scale-105 transition-all duration-300 shadow-xl flex items-center gap-2">
                   <Mail className="w-5 h-5" />
                   Contact Us Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </button></Link>
               </div>
 
               

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Award, Users, Zap, Target, Code, Brain, Cloud, Smartphone, Palette, Network, Cpu, Mail, CheckCircle, ArrowRight, Sparkles, BookOpen, Rocket, Globe } from 'lucide-react';
- 
+ import { Link } from 'react-router-dom';
 const TrainingServicesPage = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [scrollY, setScrollY] = useState(0);
@@ -179,9 +179,9 @@ const TrainingServicesPage = () => {
             <button 
               className="group relative px-8 py-4 rounded-full text-white font-semibold overflow-hidden transform transition-all duration-300 hover:scale-105 bg-[#00809D]"
             >
-              <span className="relative z-10 flex items-center gap-2">
+             <Link to='/recruitmentService'> <span className="relative z-10 flex items-center gap-2">
                 Get Started <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
+              </span></Link>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
             </button>
           </div>
