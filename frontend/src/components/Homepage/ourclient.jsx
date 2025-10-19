@@ -38,12 +38,8 @@ const Testimonials = () => {
         <div className="mt-6 sm:mt-8 bg-white shadow-lg rounded-xl p-6 sm:p-8 max-w-md sm:max-w-lg text-center relative">
           <Quote className="absolute -top-5 left-1/2 transform -translate-x-1/2 text-purple-500 w-8 sm:w-10 h-8 sm:h-10 bg-white rounded-full p-2 shadow" />
           <p className="text-gray-600 italic text-sm sm:text-base leading-relaxed">
-           “Thanks to their resume service, I landed interviews at top companies within weeks!”
+           “After working with you, we started receiving a significant number of calls! Our job search, which had been stagnant for months, completely turned around.”
           </p>
-
-          <h4 className="mt-5 font-semibold text-indigo-900 text-base sm:text-lg">
-            Becky Nelson
-          </h4>
 
           {/* Stars */}
           <div className="mt-2 flex justify-center gap-1 text-yellow-400 text-sm sm:text-base">

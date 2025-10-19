@@ -2,79 +2,106 @@ import React from "react";
 
 const B2Section = () => {
   return (
-<section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
-      <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1f44]">Why B2 👋</h2>
-    </h1>
+    <section className="text-gray-600 body-font bg-white">
+      <div className="container px-5 py-24 mx-auto">
+        <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1f44]">
+            Why B2 👋
+          </h2>
+        </h1>
 
-    <div className="flex flex-wrap -m-4">
-      <div className="p-4 md:w-1/2 w-full">
-        <div className="h-full bg-gray-100 p-8 rounded">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            className="block w-5 h-5 text-gray-400 mb-4"
-            viewBox="0 0 975.036 975.036"
-          >
-            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" />
-          </svg>
-          <p className="leading-relaxed mb-6">
-            At B2, we know that every remarkable journey begins with a single, powerful ingredient: belief. Belief in yourself, belief in your potential, and belief in the possibilities ahead. It is the spark that ignites action and sets the stage for growth.
+        <div className="flex flex-wrap -m-4">
+          {/* First Card - B2 = Believe & Become */}
+          <div className="p-4 md:w-1/2 w-full">
+            <div className="h-full bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl border-2 border-purple-200 shadow-lg hover:shadow-xl transition-shadow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                className="block w-5 h-5 text-purple-400 mb-4"
+                viewBox="0 0 975.036 975.036"
+              >
+                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" />
+              </svg>
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-[#0a1f44] mb-4">
+                  It's more than a name — it's a mindset.
+                </h3>
+                <div className="inline-block px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4">
+                  <p className="text-white font-bold text-lg">
+                    B2 = Believe & Become
+                  </p>
+                </div>
+                <p className="leading-relaxed text-gray-700">
+                  We believe that every remarkable journey starts with one essential ingredient: belief — Belief in your talent, your vision, and your possibility. We exist to turn that belief into reality by helping individuals and businesses become their best.
+                </p>
+              </div>
+              <a className="inline-flex items-center">
+                <div className="w-12 h-12 rounded-full flex-shrink-0 bg-gradient-to-br from-purple-400 to-blue-400 flex items-center justify-center">
+                  <span className="text-white text-xl font-bold">B2</span>
+                </div>
+                <span className="flex-grow flex flex-col pl-4">
+                  <span className="title-font font-medium text-gray-900">
+                    Believe & Become
+                  </span>
+                  <span className="text-gray-500 text-sm">Our Core Philosophy</span>
+                </span>
+              </a>
+            </div>
+          </div>
 
-👉 Believe: The first step toward transformation is trusting in your own abilities. When you believe in yourself, doors open, and opportunities that once seemed out of reach become attainable.
-          </p>
-          <a className="inline-flex items-center">
-            <img
-              alt="testimonial"
-              src="./hi.jpg"
-              className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-            />
-            <span className="flex-grow flex flex-col pl-4">
-              <span className="title-font font-medium text-gray-900">
-                Believe
-              </span>
-              
-            </span>
-          </a>
+          {/* Second Card - Your Launchpad */}
+          <div className="p-4 md:w-1/2 w-full">
+            <div className="h-full bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl border-2 border-emerald-200 shadow-lg hover:shadow-xl transition-shadow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                className="block w-5 h-5 text-emerald-400 mb-4"
+                viewBox="0 0 975.036 975.036"
+              >
+                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" />
+              </svg>
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-[#0a1f44] mb-4">
+                  Your Launchpad for Success 🚀
+                </h3>
+                <p className="leading-relaxed text-gray-700 mb-4">
+                  Whether you're a <span className="font-semibold text-emerald-600">professional looking for your next big opportunity</span>, or a <span className="font-semibold text-teal-600">company searching for game-changing talent</span> — B2 Tech Services is your launchpad for success.
+                </p>
+                <div className="space-y-3 mt-6">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <p className="text-gray-700">For Professionals: Find your dream role</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-teal-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+                    <p className="text-gray-700">For Companies: Discover top talent</p>
+                  </div>
+                </div>
+              </div>
+              <a className="inline-flex items-center">
+                <div className="w-12 h-12 rounded-full flex-shrink-0 bg-gradient-to-br from-emerald-400 to-teal-400 flex items-center justify-center">
+                  <span className="text-white text-2xl">🚀</span>
+                </div>
+                <span className="flex-grow flex flex-col pl-4">
+                  <span className="title-font font-medium text-gray-900">
+                    B2 Tech Services
+                  </span>
+                  <span className="text-gray-500 text-sm">Connecting Talent & Opportunity</span>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="p-4 md:w-1/2 w-full">
-        <div className="h-full bg-gray-100 p-8 rounded">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            className="block w-5 h-5 text-gray-400 mb-4"
-            viewBox="0 0 975.036 975.036"
-          >
-            <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" />
-          </svg>
-          <p className="leading-relaxed mb-6">
-           Belief alone is not enough — it must be paired with deliberate action to turn dreams into reality. At B2, we guide you through every step of the journey:
-
-Grow: Belief inspires growth. With every step forward, you learn, adapt, and expand your mindset. Challenges become opportunities, and skills develop alongside confidence.
-
-Achieve: When belief meets action, results follow. Each milestone reached fuels the momentum for even greater success
-          </p>
-          <a className="inline-flex items-center">
-            <img
-              alt="testimonial"
-              src="./download (9).jpg"
-              className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-            />
-            <span className="flex-grow flex flex-col pl-4">
-              <span className="title-font font-medium text-gray-900">
-                Grow & Achieve
-              </span>
-         
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
   );
 };
 

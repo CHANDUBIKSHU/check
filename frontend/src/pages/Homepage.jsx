@@ -12,6 +12,8 @@ import ChatWidget from '../components/chatwidget';
 import Footer from '../components/Footer';
 import Achieve from '../components/Homepage/achievements';
 import { motion } from 'framer-motion';
+import Tag from '../components/Homepage/taglines';
+
 
 function Homepage() {
   useEffect(() => {
@@ -28,6 +30,17 @@ function Homepage() {
       <Herosection>
       
       </Herosection>
+
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeInUp}
+        style={{ marginTop: '-40px' }}
+      >
+        <Tag />
+      </motion.div>
 
       <motion.div
         initial="hidden"
@@ -68,6 +81,10 @@ function Homepage() {
       >
         <Achieve />
       </motion.div>
+
+
+      
+
 
       <motion.div
         initial="hidden"

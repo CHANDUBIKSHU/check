@@ -27,6 +27,9 @@ function Whyb2() {
               At B2 Tech Services, we started with a sharp focus on recruitment — and from that solid foundation, we've grown into a dynamic, end-to-end talent solutions partner. Driven by deep industry insight and a passion for excellence, we specialize in connecting high-performing talent with mission-critical opportunities across specialized tech and business domains.
             </p>
             <p className="leading-relaxed text-lg mt-4">
+              Whether you're a company scaling rapidly or a professional seeking your next big move, we’re here to accelerate your success.
+            </p>
+            <p className="leading-relaxed text-lg mt-4">
               In a world where technology evolves at lightning speed, our mission is simple yet impactful: To empower professionals and organizations to thrive in the digital age.
             </p>
             <span className="inline-block h-1 w-10 rounded bg-[#00809D] mt-8 mb-6" />

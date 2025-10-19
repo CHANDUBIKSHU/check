@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { Users, Award, Smile } from "lucide-react";
 import Navbar from "../../components/Navbar";
-import Textani from "./textanimations";
 import { Link } from "react-router-dom";
 import bgImage from './hu.jpg';
 
@@ -60,67 +59,66 @@ function Herosection() {
         >
           {/* Left Side Content */}
           <div>
-          <motion.p
-  className="uppercase tracking-wide text-sm text-gray-200 mb-2"
+ <motion.p
+  className="uppercase tracking-wide text-sm bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-500 bg-clip-text text-transparent mb-2 drop-shadow-[0_2px_6px_rgba(0,255,255,0.4)]"
   initial={{ opacity: 0, y: -20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6 }}
-  style={{ fontSize: '30px', fontWeight: '600' }} // increased from 30px → 40px
+  style={{ fontSize: '40px', fontWeight: '700', letterSpacing: '2px' }}
 >
-  Welcome to <br/>B2 Tech Services
+  Welcome to <br /> B2 Tech Services
 </motion.p>
 
 
-            <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-[#00809D]"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Empowering Talent. <br /> Enabling Growth. <br />
-            </motion.h1>
+          <motion.h1
+  className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-teal-400 via-purple-400 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]"
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+>
+  Empowering Talent. <br /> Enabling Growth. <br />
+</motion.h1>
 
-            <motion.p
-              className="text-gray-200 mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Textani />
-            </motion.p>
 
-            <motion.button
-              className="bg-[#00809D] text-white px-8 py-4 rounded-full flex items-center justify-center gap-3 text-xl hover:bg-[#0a1f44] hover:shadow-lg transition-all duration-300 w-64"
-              whileHover={{ scale: 1.07 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-             <span className="flex items-center gap-2">
-  <Link
-    to="/recruitmentservice"
-    className="flex items-center gap-2"
-  >
-    Explore
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
+
+
+ <motion.div
+      className="flex justify-center mt-4 md:mt-6"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M17 8l4 4m0 0l-4 4m4-4H3"
-      />
-    </svg>
-  </Link>
-</span>
-
-            </motion.button>
+      <Link
+        to="/recruitmentservice"
+        className="w-full max-w-xs md:max-w-sm
+                   bg-[#00809D] 
+                   text-white font-semibold
+                   py-3 md:py-4 px-6 md:px-7
+                   rounded-full
+                   flex items-center justify-center gap-3
+                   shadow-lg hover:bg-[#0a1f44] hover:shadow-xl
+                   transition-all duration-300
+                   text-center text-lg md:text-xl cursor-pointer"
+      >
+        Explore
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 md:h-6 md:w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M17 8l4 4m0 0l-4 4m4-4H3"
+          />
+        </svg>
+      </Link>
+    </motion.div>
           </div>
 
           {/* Center Doctor Image */}
@@ -151,33 +149,7 @@ function Herosection() {
             </div>
           </motion.div>
 
-          {/* Right Side Stats */}
-          <div className="flex flex-col gap-6">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                className="relative"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 + i * 0.2 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                {/* Background Glow */}
-                <div className="absolute -inset-10 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl"></div>
 
-                <div className="relative bg-white-10 rounded-full shadow-2xl px-8 py-6 text-center flex flex-col items-center">
-                  {/* SVG Icon */}
-                  {stat.icon}
-                  <h3 className="text-3xl font-bold text-white-900">
-                    <Counter to={stat.number} />+
-                  </h3>
-                  <p className="text-[#00809D]-900 text-sm mt-2">
-                    {stat.label}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
     </div>

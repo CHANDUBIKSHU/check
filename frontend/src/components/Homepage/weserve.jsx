@@ -118,6 +118,16 @@ const LiveProjectsSection = () => {
             </div>
           ))}
         </div>
+
+        {/* View More Button */}
+        <div className="flex justify-center mt-12">
+          <Link
+            to="/Expertise"
+            className="text-white bg-blue-900 hover:bg-blue-800 px-8 py-3 rounded-full text-lg font-semibold transition duration-300"
+          >
+            View More <span className="text-xl">{">>"}</span>
+          </Link>
+        </div>
       </div>
     </section>
   );

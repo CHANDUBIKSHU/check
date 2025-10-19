@@ -17,10 +17,13 @@ export default function App() {
         <div className="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12 py-8 md:py-12 bg-white"> {/* Reduced padding */}
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a1f44]">Our Growth</h2>
           <div className="w-20 h-1 bg-[#00809D] mt-4 mb-6 rounded-full"></div>
+            <p className="text-[#00809D] leading-relaxed mx-auto max-w-2xl" style={{fontWeight:'bold'}}>
+             From Recruitment to End-to-End Talent & Tech Solutions
+            </p>
           <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6">
-            From our beginnings in recruitment, we’ve evolved into a full-spectrum
-            partner delivering end-to-end consulting, workforce solutions, and tech
-            training that empower professionals and organizations at every stage.
+            B2 Tech Services began with one mission: to connect top talent with the right opportunities.
+Today, we've evolved into a full-spectrum service partner, delivering end-to-end consulting, workforce solutions, and tech training that empower businesses and professionals at every stage of their growth.
+
           </p>
         </div>
       </div>
