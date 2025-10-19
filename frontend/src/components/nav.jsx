@@ -23,7 +23,8 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (id) => setOpenDropdown(openDropdown === id ? null : id);
+  const toggleDropdown = (id) =>
+    setOpenDropdown(openDropdown === id ? null : id);
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
     setOpenDropdown(null);
@@ -35,7 +36,7 @@ const Navbar = () => {
         <li key={item}>
           <Link
             to={`/${item}`}
-            className="block px-4 py-3 font-medium text-[#1E93AB] hover:text-red-500 hover:bg-white/20 transition capitalize cursor-pointer"
+            className="block px-4 py-3 font-medium text-[#ee00ff] hover:text-[#f472b6] hover:bg-white/10 transition capitalize cursor-pointer"
           >
             {item.replace(/([A-Z])/g, " $1").trim()}
           </Link>
@@ -45,7 +46,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-black/10 backdrop-blur-md">
       {/* Top Navbar */}
       <div className="backdrop-blur-md flex items-center justify-between px-4 sm:px-6 lg:px-8 py-4 relative z-50 bg-black/10">
         {/* Logo */}
@@ -60,19 +61,19 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-[#1E93AB]">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-[#ee00ff]">
           {/* Services */}
           <div className="relative">
             <button
               onClick={() => toggleDropdown("services")}
               aria-expanded={openDropdown === "services"}
-              className="flex items-center space-x-1 font-medium hover:text-red-500 transition cursor-pointer"
+              className="flex items-center space-x-1 font-medium text-[#ee00ff] hover:text-[#f472b6] transition cursor-pointer"
             >
               <span>Services</span>
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-300 ${
-                  openDropdown === "services" ? "rotate-180" : ""
+                  openDropdown === "services" ? "rotate-180 text-[#f472b6]" : ""
                 }`}
               />
             </button>
@@ -92,13 +93,13 @@ const Navbar = () => {
             <button
               onClick={() => toggleDropdown("company")}
               aria-expanded={openDropdown === "company"}
-              className="flex items-center space-x-1 font-medium hover:text-red-500 transition cursor-pointer"
+              className="flex items-center space-x-1 font-medium text-[#ee00ff] hover:text-[#f472b6] transition cursor-pointer"
             >
               <span>About</span>
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-300 ${
-                  openDropdown === "company" ? "rotate-180" : ""
+                  openDropdown === "company" ? "rotate-180 text-[#f472b6]" : ""
                 }`}
               />
             </button>
@@ -118,7 +119,7 @@ const Navbar = () => {
             <Link
               to={`/${item}`}
               key={item}
-              className="text-[#1E93AB] font-semibold hover:text-red-500 transition capitalize cursor-pointer"
+              className="text-[#ee00ff] font-semibold hover:text-[#f472b6] transition capitalize cursor-pointer"
             >
               {item}
             </Link>
@@ -128,7 +129,7 @@ const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <button
           onClick={toggleMobileMenu}
-          className="md:hidden p-2 text-[#1E93AB] hover:text-red-500 transition cursor-pointer"
+          className="md:hidden p-2 text-[#38bdf8] hover:text-[#f472b6] transition cursor-pointer"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -140,12 +141,12 @@ const Navbar = () => {
           mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="px-4 py-4 space-y-3 text-[#1E93AB]">
+        <div className="px-4 py-4 space-y-3 text-[#38bdf8]">
           {/* Services */}
           <div>
             <button
               onClick={() => toggleDropdown("services")}
-              className={`flex items-center justify-between w-full px-4 py-3 font-medium rounded-lg transition-colors cursor-pointer hover:text-red-500 ${
+              className={`flex items-center justify-between w-full px-4 py-3 font-medium rounded-lg transition-colors cursor-pointer hover:text-[#f472b6] ${
                 openDropdown === "services" ? "bg-white/20" : "bg-black/20"
               }`}
             >
@@ -153,7 +154,9 @@ const Navbar = () => {
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-300 ${
-                  openDropdown === "services" ? "rotate-180" : ""
+                  openDropdown === "services"
+                    ? "rotate-180 text-[#f472b6]"
+                    : ""
                 }`}
               />
             </button>
@@ -172,7 +175,7 @@ const Navbar = () => {
           <div>
             <button
               onClick={() => toggleDropdown("company")}
-              className={`flex items-center justify-between w-full px-4 py-3 font-semibold rounded-lg transition-colors cursor-pointer hover:text-red-500 ${
+              className={`flex items-center justify-between w-full px-4 py-3 font-semibold rounded-lg transition-colors cursor-pointer hover:text-[#f472b6] ${
                 openDropdown === "company" ? "bg-white/20" : "bg-black/20"
               }`}
             >
@@ -180,7 +183,9 @@ const Navbar = () => {
               <ChevronDown
                 size={16}
                 className={`transition-transform duration-300 ${
-                  openDropdown === "company" ? "rotate-180" : ""
+                  openDropdown === "company"
+                    ? "rotate-180 text-[#f472b6]"
+                    : ""
                 }`}
               />
             </button>
@@ -200,7 +205,7 @@ const Navbar = () => {
             <Link
               to={`/${item}`}
               key={item}
-              className="block px-4 py-3 font-semibold hover:text-red-500 transition capitalize cursor-pointer"
+              className="block px-4 py-3 font-semibold text-[#38bdf8] hover:text-[#f472b6] transition capitalize cursor-pointer"
             >
               {item}
             </Link>

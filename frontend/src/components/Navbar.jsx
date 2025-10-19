@@ -36,7 +36,7 @@ const Navbar = () => {
         <li key={item}>
           <Link
             to={`/${item}`}
-            className="block px-4 py-3 font-medium text-[#38bdf8] hover:text-[#f472b6] hover:bg-white/10 transition capitalize cursor-pointer"
+            className="block px-4 py-3 font-medium text-[#ee00ff] hover:text-[#f472b6] hover:bg-white/10 transition capitalize cursor-pointer"
           >
             {item.replace(/([A-Z])/g, " $1").trim()}
           </Link>
@@ -61,13 +61,13 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-[#38bdf8]">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-[#ee00ff]">
           {/* Services */}
           <div className="relative">
             <button
               onClick={() => toggleDropdown("services")}
               aria-expanded={openDropdown === "services"}
-              className="flex items-center space-x-1 font-medium text-[#38bdf8] hover:text-[#f472b6] transition cursor-pointer"
+              className="flex items-center space-x-1 font-medium text-[#ee00ff] hover:text-[#f472b6] transition cursor-pointer"
             >
               <span>Services</span>
               <ChevronDown
@@ -93,7 +93,7 @@ const Navbar = () => {
             <button
               onClick={() => toggleDropdown("company")}
               aria-expanded={openDropdown === "company"}
-              className="flex items-center space-x-1 font-medium text-[#38bdf8] hover:text-[#f472b6] transition cursor-pointer"
+              className="flex items-center space-x-1 font-medium text-[#ee00ff] hover:text-[#f472b6] transition cursor-pointer"
             >
               <span>About</span>
               <ChevronDown
@@ -119,7 +119,7 @@ const Navbar = () => {
             <Link
               to={`/${item}`}
               key={item}
-              className="text-[#38bdf8] font-semibold hover:text-[#f472b6] transition capitalize cursor-pointer"
+              className="text-[#ee00ff] font-semibold hover:text-[#f472b6] transition capitalize cursor-pointer"
             >
               {item}
             </Link>
