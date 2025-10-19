@@ -13,11 +13,13 @@ import Growth from "./pages/About/FoundersVision";
 {
   /* services page*/
 }
+import WeOfferServices from "./pages/services/WeOfferServices"
 import Recruitmentservice from "./pages/services/Recruitmentservices";
 import Resumeservices from "./pages/services/Resumeservices";
 import SoftwareTraining from "./pages/services/softwaretrainingprograms";
 import Ui from "./pages/services/Uiuxdesign";
 import Whatssets from "./pages/services/whatssets";
+import Course from "./pages/services/Course"
 {
   /* backend coming routes*/
 }
@@ -41,6 +43,8 @@ function App() {
           <Route path="/growthJourney" element={<Growth />} />
           <Route path="/recruitmentService" element={<Recruitmentservice />} />
           <Route path="/resumeServices" element={<Resumeservices />} />
+          <Route path="/services" element={<WeOfferServices />} />
+          <Route path="/Courses" element={<Course />} />
           <Route path="/softwareTraining" element={<SoftwareTraining />} />
           <Route path="/uiUxDesignThinking" element={<Ui />} />
           <Route path="/whatSetsUsApart" element={<Whatssets />} />

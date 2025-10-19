@@ -26,6 +26,11 @@ function Footer() {
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <ul className="space-y-3">
               <li>
+                <Link to="/services" className="hover:text-[#00809D] transition">
+                   Services
+                </Link>
+              </li>
+              <li>
                 <Link to="/recruitmentService" className="hover:text-[#00809D] transition">
                   Recruitment Service
                 </Link>
@@ -43,6 +48,11 @@ function Footer() {
               <li>
                 <Link to="/uiUxDesignThinking" className="hover:text-[#00809D] transition">
                   UI/UX Design Thinking
+                </Link>
+              </li>
+              <li>
+                <Link to="/courses" className="hover:text-[#00809D] transition">
+                  Courses
                 </Link>
               </li>
             </ul>
