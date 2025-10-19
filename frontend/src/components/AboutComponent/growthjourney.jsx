@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import {
   TrendingUp,
   Rocket,
@@ -11,14 +11,26 @@ import {
   CheckCircle,
   Star,
   Sparkles,
+  ArrowRight,
+  Briefcase,
+  UserCheck,
+  Clock,
+  Shield,
 } from "lucide-react";
-import In from '../../../public/AboutImg/in.jpg';
-import growth from '../../../public/AboutImg/growth.jpg';
-import team2 from '../../../public/AboutImg/team2.jpg';
-import leader from '../../../public/AboutImg/leader.jpg';
 
 export default function ValuesPage() {
   const [scrollY, setScrollY] = useState(0);
+
+  // Placeholder images - replace with your actual imports
+  const images = {
+    In: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+    growth:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    team2:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+    leader:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -33,6 +45,7 @@ export default function ValuesPage() {
       description:
         "Growth is a continuous journey. Every day offers a fresh chance to learn, evolve, and elevate — in ourselves, our services, and our relationships.",
       color: "from-blue-500 to-cyan-500",
+      emoji: "🌱",
     },
     {
       icon: Rocket,
@@ -40,6 +53,7 @@ export default function ValuesPage() {
       description:
         "We take meaningful action today to build a stronger, more successful future. Progress waits for no one — and neither do we.",
       color: "from-purple-500 to-pink-500",
+      emoji: "🚀",
     },
     {
       icon: Heart,
@@ -47,6 +61,7 @@ export default function ValuesPage() {
       description:
         "We create value that lasts. For our clients, candidates, and communities, our goal is to leave a positive and enduring impact through everything we do.",
       color: "from-red-500 to-orange-500",
+      emoji: "💡",
     },
     {
       icon: Users,
@@ -54,13 +69,15 @@ export default function ValuesPage() {
       description:
         "Collaboration is at the heart of our success. By nurturing strong partnerships — within our team and with our clients — we move faster, smarter, and farther.",
       color: "from-green-500 to-teal-500",
+      emoji: "🤝",
     },
     {
       icon: Zap,
       title: "Going the Extra Mile",
       description:
-        "Good enough is not part of our vocabulary. We consistently push beyond expectations to deliver outstanding results that speak volumes.",
+        '"Good enough" is not part of our vocabulary. We consistently push beyond expectations to deliver outstanding results that speak volumes.',
       color: "from-yellow-500 to-orange-500",
+      emoji: "🔥",
     },
     {
       icon: Award,
@@ -68,6 +85,7 @@ export default function ValuesPage() {
       description:
         "We take ownership of our work and every outcome. Excellence isn't just a goal — it's our standard.",
       color: "from-indigo-500 to-purple-500",
+      emoji: "🏆",
     },
   ];
 
@@ -89,16 +107,6 @@ export default function ValuesPage() {
 
       {/* Hero Section */}
       <div className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a1f44] via-[#0a1f44] to-[#00809D]">
-        {/* Background Image - Add your image URL here */}
-        <div className="absolute inset-0">
-          {/* <img 
-            src="YOUR_IMAGE_URL_HERE" 
-            alt="Values Banner" 
-            className="w-full h-full object-cover opacity-30"
-          /> */}
-        </div>
-
-        {/* Animated Background Overlay */}
         <div className="absolute inset-0 overflow-hidden">
           <div
             className="absolute top-0 left-0 w-96 h-96 bg-[#00809D] rounded-full blur-3xl opacity-20 animate-pulse"
@@ -110,7 +118,10 @@ export default function ValuesPage() {
           ></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto"style={{marginTop:'70px'}}>
+        <div
+          className="relative z-10 text-center px-4 max-w-5xl mx-auto"
+          style={{ marginTop: "70px" }}
+        >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             We Believe In
           </h1>
@@ -122,12 +133,103 @@ export default function ValuesPage() {
         </div>
       </div>
 
+      {/* B2 = Believe & Become Section */}
+      <div className="py-20 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-50 rounded-full border border-[#00809D]/20 mb-6">
+              <Sparkles className="w-5 h-5 text-[#00809D]" />
+              <span className="text-[#00809D] font-semibold text-sm sm:text-base">
+                Our Philosophy
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-6">
+              🔷 Why "B2"?
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#00809D] to-[#0a1f44] mx-auto mb-8"></div>
+            <h3 className="text-3xl md:text-4xl font-bold text-[#00809D] mb-6">
+              B2 = Believe & Become
+            </h3>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#0a1f44] to-[#00809D] rounded-3xl p-8 md:p-12 shadow-2xl text-white mb-12">
+            <div className="space-y-6">
+              <p className="text-xl md:text-2xl leading-relaxed">
+                At B2 Tech Services, our name is more than just a brand — it's a
+                mindset.{" "}
+                <span className="font-bold text-[#00809D] bg-white px-2 py-1 rounded">
+                  "Believe in yourself. Become who you're meant to be."
+                </span>
+              </p>
+              <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+                We believe that every great journey—whether it's building a
+                career, growing a business, or transforming an idea—starts with
+                belief and is shaped through consistent, determined action.
+              </p>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                <p className="text-xl font-bold text-center">
+                  This isn't just our philosophy. It's the core of everything we
+                  do.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#0a1f44] mb-6 text-center">
+              It's more than a name — it's a mindset
+            </h3>
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+              We believe that every remarkable journey starts with one essential
+              ingredient: belief — Belief in your talent, your vision, and your
+              possibility. We exist to turn that belief into reality by helping
+              individuals and businesses become their best.
+            </p>
+            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-2xl">
+              <p className="text-xl text-[#0a1f44] text-center font-semibold">
+                Whether you're a professional looking for your next big
+                opportunity, or a company searching for game-changing talent —
+                B2 Tech Services is your launchpad for success.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 bg-gradient-to-r from-[#00809D] to-[#0a1f44] rounded-2xl p-8 text-center text-white shadow-2xl">
+            <p className="text-2xl md:text-3xl font-bold">
+              This isn't just a tagline — It's our mission, our mindset, and the
+              movement we're building.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Mission Statement */}
+      <div className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-lg">
+            <div className="text-center">
+              <h3 className="text-3xl md:text-4xl font-bold text-[#0a1f44] mb-6">
+                We Don't Just Fill Roles — We Fuel Your Growth and Success
+              </h3>
+              <p className="text-xl text-gray-700 leading-relaxed">
+                Guided by a visionary leader who leads by example, our team
+                stands for quality, trust, and meaningful impact in every client
+                partnership.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Values Grid Section */}
       <div className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] text-center mb-6">
-            What Drives Us Every Single Day
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] text-center mb-4">
+            We Believe In
           </h2>
+          <p className="text-xl text-gray-600 text-center mb-8 max-w-4xl mx-auto">
+            Here's what drives us every single day
+          </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#00809D] to-[#0a1f44] mx-auto mb-16"></div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,10 +240,13 @@ export default function ValuesPage() {
                   key={index}
                   className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
                 >
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <Icon className="w-8 h-8 text-white" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-4xl">{value.emoji}</div>
                   </div>
                   <h3 className="text-xl font-bold text-[#0a1f44] mb-4 group-hover:text-[#00809D] transition-colors">
                     {value.title}
@@ -152,6 +257,43 @@ export default function ValuesPage() {
                 </div>
               );
             })}
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-[#0a1f44] to-[#00809D] rounded-2xl p-8 text-white shadow-2xl">
+              <p className="text-2xl md:text-3xl font-bold">
+                At B2 Tech Services, These Aren't Just Values — They Are the
+                Principles That Power Everything We Do.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* How We Work Section */}
+      <div className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-50 rounded-full border border-[#00809D]/20 mb-6">
+              <Users className="w-5 h-5 text-[#00809D]" />
+              <span className="text-[#00809D] font-semibold text-sm sm:text-base">
+                Our Approach
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-6">
+              How We Work
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#00809D] to-[#0a1f44] mx-auto"></div>
+          </div>
+
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-lg">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed text-center">
+              We operate as one unified team, blending individual strengths,
+              diverse expertise, and shared values to drive collective success.
+              Our collaborative approach allows us to navigate challenges with
+              precision and agility, ensuring the best possible outcomes for
+              every client, every time.
+            </p>
           </div>
         </div>
       </div>
@@ -247,24 +389,24 @@ export default function ValuesPage() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src={In}
+                  src={images.In}
                   alt="Innovation"
                   className="rounded-2xl shadow-xl w-full h-64 object-cover"
                 />
                 <img
-                  src={growth}
+                  src={images.growth}
                   alt="Growth"
                   className="rounded-2xl shadow-xl w-full h-48 object-cover"
                 />
               </div>
               <div className="space-y-4 pt-8">
                 <img
-                  src={team2}
+                  src={images.team2}
                   alt="Teamwork"
                   className="rounded-2xl shadow-xl w-full h-48 object-cover"
                 />
                 <img
-                  src={leader}
+                  src={images.leader}
                   alt="Leadership"
                   className="rounded-2xl shadow-xl w-full h-64 object-cover"
                 />
@@ -355,6 +497,207 @@ export default function ValuesPage() {
         </div>
       </div>
 
+      {/* Join Us Section */}
+      <div className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-50 rounded-full border border-[#00809D]/20 mb-6">
+              <Award className="w-5 h-5 text-[#00809D]" />
+              <span className="text-[#00809D] font-semibold text-sm sm:text-base">
+                Partner With Us
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-6">
+              Join Us on Our Journey
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#00809D] to-[#0a1f44] mx-auto mb-8"></div>
+          </div>
+
+          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-gray-100 shadow-lg mb-12">
+            <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center">
+              As we continue to set new standards in recruitment and talent
+              solutions, we invite forward-thinking organizations to partner
+              with us.
+            </p>
+
+            <h3 className="text-2xl font-bold text-[#0a1f44] mb-6 text-center">
+              Whether you are:
+            </h3>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="w-12 h-12 bg-[#00809D] rounded-lg flex items-center justify-center mb-4">
+                  <Briefcase className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Filling highly specialized technical roles
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="w-12 h-12 bg-[#00809D] rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Scaling rapidly and need a reliable, efficient hiring engine
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-2xl shadow-lg">
+                <div className="w-12 h-12 bg-[#00809D] rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Seeking strategic, long-term talent support
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <p className="text-xl text-gray-700 font-semibold">
+                We're here to power your growth with top-tier talent and
+                comprehensive, end-to-end hiring solutions.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-2xl md:text-3xl font-bold text-[#00809D] mb-8">
+              Let's build the future — together.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Job Right Candidate Section */}
+      <div className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0a1f44] mb-6">
+              Right Job. Right Candidate. Right Now.
+            </h2>
+            <p className="text-2xl text-[#00809D] font-bold mb-8">
+              Only Possible with B2 Tech Services.
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#00809D] to-[#0a1f44] mx-auto mb-8"></div>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 mb-12">
+            <p className="text-xl text-gray-700 leading-relaxed mb-8">
+              Finding the perfect match in today's fast-paced world isn't easy.
+              Whether you're a candidate searching for the right opportunity or
+              a company seeking ideal talent, timing and precision matter—more
+              than ever.
+            </p>
+            <p className="text-2xl font-bold text-center text-[#0a1f44] mb-4">
+              That's where B2 Tech Services steps in.
+            </p>
+            <p className="text-lg text-gray-600 text-center">
+              We don't just fill positions; we connect potential with
+              opportunity—swiftly, accurately, and effectively.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* For Candidates */}
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#00809D] to-[#0a1f44] rounded-xl flex items-center justify-center mb-6">
+                <UserCheck className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0a1f44] mb-6">
+                For Candidates:
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-[#00809D] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-[#0a1f44] mb-1">
+                      Tailored Opportunities:
+                    </p>
+                    <p className="text-gray-600">
+                      We understand your skills, aspirations, and career goals
+                      to match you with roles where you can truly thrive.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-[#00809D] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-[#0a1f44] mb-1">
+                      Immediate Impact:
+                    </p>
+                    <p className="text-gray-600">
+                      Our vast network means you gain access to openings that
+                      suit your profile right now—not months later.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-[#00809D] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-[#0a1f44] mb-1">
+                      Career Growth:
+                    </p>
+                    <p className="text-gray-600">
+                      We partner with industry leaders who value and invest in
+                      your development.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* For Employers */}
+            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 shadow-lg border border-gray-100">
+              <div className="w-16 h-16 bg-gradient-to-br from-[#00809D] to-[#0a1f44] rounded-xl flex items-center justify-center mb-6">
+                <Briefcase className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-[#0a1f44] mb-6">
+                For Employers:
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-[#00809D] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-[#0a1f44] mb-1">
+                      Top-Tier Talent:
+                    </p>
+                    <p className="text-gray-600">
+                      Access India's elite pool of candidates, rigorously vetted
+                      and ready to contribute from day one.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-[#00809D] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-[#0a1f44] mb-1">
+                      Speed & Precision:
+                    </p>
+                    <p className="text-gray-600">
+                      Our proven processes ensure you meet the right
+                      candidates—saving you time and resources.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-[#00809D] flex-shrink-0 mt-1" />
+                  <div>
+                    <p className="font-semibold text-[#0a1f44] mb-1">
+                      Scalable Solutions:
+                    </p>
+                    <p className="text-gray-600">
+                      Whether hiring a single star player or building entire
+                      teams, we adapt to your pace and needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Final CTA Section */}
       <div className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0a1f44] via-[#00809D] to-[#0a1f44]"></div>
@@ -375,18 +718,37 @@ export default function ValuesPage() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-8">
+            <Clock className="w-5 h-5 text-white" />
+            <span className="text-white font-semibold text-sm sm:text-base">
+              Take Action Today
+            </span>
+          </div>
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
             At B2 Tech Services, These Aren't Just Values
           </h2>
           <p className="text-2xl md:text-3xl text-blue-100 mb-8">
             They Are the Principles That Power Everything We Do
           </p>
-          <p className="text-xl text-white mb-12 max-w-3xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
             We don't just connect talent with opportunity; we build the
             foundation for your future success.
           </p>
-          <button className="bg-white text-[#00809D] px-10 py-4 rounded-full text-lg font-bold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl font-bold text-white mb-4">
+              📩 Looking to hire or get hired?
+            </p>
+            <p className="text-lg text-blue-100">
+              Connect with us today and let's take the next big step in your
+              recruitment journey.
+            </p>
+          </div>
+
+          <button className="bg-white text-[#00809D] px-10 py-4 rounded-full text-lg font-bold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center gap-3">
             <Link to="/contact">Partner With Us Today</Link>
+            <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       </div>

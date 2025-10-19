@@ -11,9 +11,9 @@ const SERVICES = [
 ];
 
 const COMPANY = [
-  "companyPhilosophy",
+  "CompanyPhilosophy",
   "coreValues",
-  "foundersVision",
+  "FoundersVision",
   "growthJourney",
 ];
 
@@ -23,7 +23,8 @@ const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (id) => setOpenDropdown(openDropdown === id ? null : id);
+  const toggleDropdown = (id) =>
+    setOpenDropdown(openDropdown === id ? null : id);
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
     setOpenDropdown(null);

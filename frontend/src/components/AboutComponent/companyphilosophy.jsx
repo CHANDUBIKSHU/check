@@ -1,19 +1,29 @@
 import React, { useState, useEffect } from "react";
-import {Link } from "react-router-dom";
-import train from '../../../public/AboutImg/train.jpg';
-import excellence from '../../../public/AboutImg/excellence.jpg'
-import star from '../../../public/AboutImg/star.jpg'
-import diamond from '../../../public/AboutImg/diamond.jpg';
-import star1 from '../../../public/AboutImg/star1.jpg';
-import agile from '../../../public/AboutImg/agile.jpg';
-import app from '../../../public/AboutImg/app.jpg';
-import expert from '../../../public/AboutImg/expert.jpg';
-import team1 from  '../../../public/AboutImg/team1.jpg'
-import pro from  '../../../public/AboutImg/pro.webp';
+import { Link } from "react-router-dom";
 
 export default function B2TechLanding() {
   const [scrollY, setScrollY] = useState(0);
   const [visibleSections, setVisibleSections] = useState({});
+
+  // Placeholder images - replace with your actual imports
+  const images = {
+    pro: "/AboutImg/pro.webp",
+    team1: "/AboutImg/team1.jpg",
+    expert:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80",
+    app: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&q=80",
+    agile:
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80",
+    excellence:
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80",
+    star: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+    diamond:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80",
+    star1:
+      "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80",
+    train:
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -58,16 +68,14 @@ export default function B2TechLanding() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="text-white space-y-6 lg:space-y-8">
-                <div className="inline-block"  style={{marginTop:'70px'}}>
+                <div className="inline-block" style={{ marginTop: "70px" }}>
                   <span className="px-4 py-2 bg-[#00809D]/30 border border-[#00809D]/40 rounded-full text-blue-200 text-xs sm:text-sm font-semibold uppercase tracking-wider">
                     Enterprise Talent Solutions
                   </span>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Welcome to
-                  <br />
-                  <span className="text-[#00809D]">B2 Tech Services</span>
+                <h1 className="text-5xl sm:text-8xl md:text-10xl lg:text-8xl font-bold leading-tight">
+                  About Us
                 </h1>
 
                 <p className="text-xl sm:text-2xl lg:text-3xl text-blue-200 font-light">
@@ -109,7 +117,7 @@ export default function B2TechLanding() {
                   <div className="relative bg-gradient-to-br from-[#00809D]/20 to-[#0a1f44]/20 backdrop-blur-sm rounded-2xl lg:rounded-3xl p-6 lg:p-8 border border-white/20 shadow-2xl transform group-hover:scale-[1.02] transition-all duration-500">
                     <div className="aspect-[4/3] rounded-xl lg:rounded-2xl overflow-hidden shadow-xl bg-gray-200">
                       <img
-                        src={pro}
+                        src={images.pro}
                         alt="Professional Talent Solutions"
                         className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                       />
@@ -133,6 +141,63 @@ export default function B2TechLanding() {
                 </div>
                 <div className="absolute -bottom-4 -right-4 lg:-bottom-6 lg:-right-6 w-24 h-24 lg:w-40 lg:h-40 bg-[#00809D] rounded-full opacity-20 blur-3xl"></div>
                 <div className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 w-32 h-32 lg:w-48 lg:h-48 bg-[#0a1f44] rounded-full opacity-20 blur-3xl"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Origin Story Section */}
+      <section
+        id="section-origin"
+        className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-cyan-50 transition-all duration-1000 ${
+          visibleSections["section-origin"]
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 lg:mb-16">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-[#00809D]/20 mb-6">
+              <svg
+                className="w-5 h-5 text-[#00809D]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+              <span className="text-[#00809D] font-semibold text-sm sm:text-base">
+                Our Beginning
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a1f44] mb-6">
+              🚀 Our Origin Story
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-white rounded-2xl lg:rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 border border-gray-100">
+            <div className="space-y-6 text-gray-700 leading-relaxed">
+              <p className="text-lg sm:text-xl">
+                What began as one expert's vision has evolved into a
+                mission-driven movement. Our founder — a seasoned talent
+                acquisition strategist — saw beyond the limitations of
+                recruiting for a single company.
+              </p>
+              <p className="text-lg sm:text-xl">
+                He envisioned a platform that could amplify potential on both
+                sides of the talent equation — empowering professionals to
+                thrive and helping organizations scale with the right people.
+              </p>
+              <div className="pt-4 border-t-2 border-[#00809D]/20">
+                <p className="text-2xl sm:text-3xl font-bold text-[#00809D] text-center">
+                  And so, B2 Tech Services was born.
+                </p>
               </div>
             </div>
           </div>
@@ -171,7 +236,7 @@ export default function B2TechLanding() {
                     }}
                   >
                     <img
-                      src={team1}
+                      src={images.team1}
                       alt="Team Collaboration"
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-1000"
                     />
@@ -310,21 +375,21 @@ export default function B2TechLanding() {
                 description:
                   "Proven experience in navigating niche markets and complex talent needs with precision and strategic insight.",
                 gradient: "from-[#00809D] to-[#0a1f44]",
-                image: expert,
+                image: images.expert,
               },
               {
                 title: "People-First Approach",
                 description:
                   "We prioritize meaningful relationships and long-term partnerships that create sustainable value for all stakeholders.",
                 gradient: "from-[#0a1f44] to-[#00809D]",
-                image: app,
+                image: images.app,
               },
               {
                 title: "Agile & Adaptive",
                 description:
                   "We evolve with the market, ensuring you always stay ahead of the curve in a rapidly changing landscape.",
                 gradient: "from-[#00809D] to-cyan-600",
-                image: agile,
+                image: images.agile,
               },
             ].map((item, idx) => (
               <div
@@ -402,6 +467,13 @@ export default function B2TechLanding() {
             <p className="text-lg sm:text-xl lg:text-2xl text-[#00809D] font-semibold px-4">
               From Recruitment to End-to-End Talent & Tech Solutions
             </p>
+            <p className="text-base sm:text-lg text-gray-600 mt-4 max-w-4xl mx-auto">
+              B2 Tech Services began with one mission: to connect top talent
+              with the right opportunities. Today, we've evolved into a
+              full-spectrum service partner, delivering end-to-end consulting,
+              workforce solutions, and tech training that empower businesses and
+              professionals at every stage of their growth.
+            </p>
           </div>
 
           <div className="space-y-8 lg:space-y-12">
@@ -427,7 +499,7 @@ export default function B2TechLanding() {
                   "B2 Tech Services began with one mission: to connect top talent with the right opportunities. We established ourselves as a trusted recruitment partner.",
                 year: "Phase 1",
                 shapeType: "wave",
-                image: excellence,
+                image: images.excellence,
               },
               {
                 icon: (
@@ -450,7 +522,7 @@ export default function B2TechLanding() {
                   "Expanded into full-spectrum consulting services, providing strategic workforce planning and organizational development solutions.",
                 year: "Phase 2",
                 shapeType: "triangle",
-                image: star,
+                image: images.star,
               },
               {
                 icon: (
@@ -473,7 +545,7 @@ export default function B2TechLanding() {
                   "Developed comprehensive talent management, deployment strategies, and end-to-end workforce solutions for enterprise clients.",
                 year: "Phase 3",
                 shapeType: "pentagon",
-                image: diamond,
+                image: images.diamond,
               },
               {
                 icon: (
@@ -496,7 +568,7 @@ export default function B2TechLanding() {
                   "Launched industry-leading training programs to upskill individuals and teams, future-proofing careers and organizations.",
                 year: "Phase 4",
                 shapeType: "hexagon",
-                image: star1,
+                image: images.star1,
               },
             ].map((milestone, idx) => (
               <div
@@ -634,10 +706,312 @@ export default function B2TechLanding() {
         </div>
       </section>
 
+      {/* Additional Services Section */}
+      <section
+        id="section-services"
+        className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${
+          visibleSections["section-services"]
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a1f44] mb-6">
+              One Platform. Multiple Solutions. Real Impact.
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              We don't just match candidates with jobs — We build future-ready
+              professionals and power the growth of visionary organizations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mb-12">
+            {[
+              {
+                icon: (
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                    />
+                  </svg>
+                ),
+                title: "Industry-Leading Software Training",
+                description:
+                  "Stay ahead of the curve with our cutting-edge training programs, designed to upskill individuals and teams in the most in-demand technologies. We don't just train — we future-proof careers and organizations.",
+                gradient: "from-purple-500 to-pink-500",
+              },
+              {
+                icon: (
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    />
+                  </svg>
+                ),
+                title: "Expertise Across Diverse Tech Domains",
+                description:
+                  "From UI/UX Design to PHP, Python, Salesforce, Drupal, Wireless Technologies, and beyond — we deliver customized tech solutions tailored to your unique business needs.",
+                gradient: "from-blue-500 to-cyan-500",
+              },
+              {
+                icon: (
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 10V3L4 14h7v7l9-11h-7z"
+                    />
+                  </svg>
+                ),
+                title: "Continuous Innovation, Constant Evolution",
+                description:
+                  "Innovation is in our DNA. We stay ahead of industry trends to continuously expand our offerings, helping you navigate complex, technology-driven challenges with agility and confidence.",
+                gradient: "from-orange-500 to-red-500",
+              },
+              {
+                icon: (
+                  <svg
+                    className="w-8 h-8"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                ),
+                title: "Empowering Professionals",
+                description:
+                  "We go beyond traditional recruitment. We help professionals build their personal brand, craft recruiter-ready resumes, and access opportunities that align with their skills, goals, and aspirations. Because we believe success begins with self-investment.",
+                gradient: "from-green-500 to-teal-500",
+              },
+            ].map((service, idx) => (
+              <div
+                key={idx}
+                className="group bg-white rounded-2xl p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
+              >
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
+                  {service.icon}
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#0a1f44] mb-3 group-hover:text-[#00809D] transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-gradient-to-br from-[#0a1f44] to-[#00809D] rounded-2xl lg:rounded-3xl p-6 lg:p-10 text-white">
+            <div className="text-center space-y-4">
+              <h3 className="text-2xl sm:text-3xl font-bold">
+                Building Opportunities for All
+              </h3>
+              <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
+                At B2 Tech Services, inclusivity fuels innovation. We are
+                committed to creating earning opportunities for everyone — even
+                for those with a single source of income. Here, your mindset
+                determines your growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Excellence Section */}
+      <section
+        id="section-excellence"
+        className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white transition-all duration-1000 ${
+          visibleSections["section-excellence"]
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a1f44] mb-6">
+              🎯 Think About It
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {[
+              {
+                names: "Sachin Tendulkar & Virat Kohli",
+                field: "Masters of Cricket",
+                icon: "🏏",
+                gradient: "from-blue-500 to-cyan-500",
+              },
+              {
+                names: "Shreya Ghoshal & Arijit Singh",
+                field: "Icons in Music",
+                icon: "🎵",
+                gradient: "from-purple-500 to-pink-500",
+              },
+              {
+                names: "Shah Rukh Khan & Aamir Khan",
+                field: "Legends of Cinema",
+                icon: "🎬",
+                gradient: "from-orange-500 to-red-500",
+              },
+              {
+                names: "Mukesh Ambani & Gautam Adani",
+                field: "Titans of Industry",
+                icon: "💼",
+                gradient: "from-green-500 to-teal-500",
+              },
+            ].map((legend, idx) => (
+              <div
+                key={idx}
+                className="group bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-100"
+              >
+                <div
+                  className={`text-5xl mb-4 text-center transform group-hover:scale-110 transition-transform duration-300`}
+                >
+                  {legend.icon}
+                </div>
+                <h3 className="text-lg font-bold text-[#0a1f44] mb-2 text-center">
+                  {legend.names}
+                </h3>
+                <p
+                  className={`text-center font-semibold bg-gradient-to-r ${legend.gradient} bg-clip-text text-transparent`}
+                >
+                  {legend.field}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Each of these icons achieved greatness not just through talent,
+              but through{" "}
+              <span className="font-bold text-[#00809D]">
+                dedication, strategic thinking, and the right support system
+              </span>
+              . That's exactly what we provide at B2 Tech Services.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Promise Section */}
+      <section
+        id="section-promise"
+        className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0a1f44] via-[#0a1f44] to-[#00809D] text-white transition-all duration-1000 ${
+          visibleSections["section-promise"]
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-10 lg:mb-16">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+              <svg
+                className="w-5 h-5 text-[#00809D]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span className="text-blue-200 font-semibold text-sm sm:text-base">
+                Our Commitment
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+              Our Promise
+            </h2>
+            <p className="text-2xl sm:text-3xl text-[#00809D] font-bold mb-4">
+              More Than Recruitment — Real Results, Real Impact
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-10 border border-white/20">
+              <p className="text-lg sm:text-xl text-blue-100 leading-relaxed mb-6">
+                At B2 Tech Services, we make a simple but powerful commitment:
+                To deliver results that truly matter.
+              </p>
+              <p className="text-lg sm:text-xl text-blue-100 leading-relaxed mb-6">
+                Driven by our founder's uncompromising passion for excellence
+                and relentless pursuit of performance, we go far beyond
+                traditional hiring practices.
+              </p>
+              <p className="text-lg sm:text-xl text-blue-100 leading-relaxed">
+                We deliver tailored, strategic talent solutions — built around
+                your unique business goals and powered by speed, precision, and
+                deep domain expertise.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/10">
+              <p className="text-xl sm:text-2xl font-bold text-center mb-6">
+                Because with us, you're not just filling positions.
+              </p>
+              <div className="grid sm:grid-cols-3 gap-6">
+                {[
+                  { icon: "✅", text: "Precision-driven hiring" },
+                  { icon: "✅", text: "Strategic alignment" },
+                  { icon: "✅", text: "Exceptional outcomes — every time" },
+                ].map((item, idx) => (
+                  <div key={idx} className="text-center space-y-2">
+                    <div className="text-3xl">{item.icon}</div>
+                    <p className="text-blue-100 font-semibold">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="text-center bg-gradient-to-r from-[#00809D] to-cyan-500 rounded-2xl p-6 lg:p-8 shadow-2xl">
+              <p className="text-xl sm:text-2xl font-bold">
+                You're building high-impact teams. Strengthening your
+                organization. Laying the foundation for long-term success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Training Section */}
       <section
         id="section-training"
-        className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0a1f44] via-[#0a1f44] to-[#00809D] text-white transition-all duration-1000 ${
+        className={`py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-1000 ${
           visibleSections["section-training"]
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-10"
@@ -645,7 +1019,7 @@ export default function B2TechLanding() {
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-white backdrop-blur-sm rounded-full border border-[#00809D]/20 mb-6 shadow-lg">
               <svg
                 className="w-5 h-5 text-[#00809D]"
                 fill="none"
@@ -665,17 +1039,18 @@ export default function B2TechLanding() {
                   d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
                 />
               </svg>
-              <span className="text-blue-200 font-semibold text-sm sm:text-base">
+              <span className="text-[#00809D] font-semibold text-sm sm:text-base">
                 Training Excellence
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Transform Your Career with Expert Training
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a1f44] leading-tight mb-6">
+              Future-Ready Training. Industry-Ready Talent.
             </h2>
-            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-              Stay ahead of the curve with our cutting-edge training programs,
-              designed to upskill individuals and teams in the most in-demand
-              technologies.
+            <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">
+              Whether you're a company looking to build high-performing teams or
+              a candidate preparing for your next big opportunity, B2 Tech
+              Services provides the skills, knowledge, and confidence to succeed
+              in today's competitive market.
             </p>
           </div>
 
@@ -764,59 +1139,59 @@ export default function B2TechLanding() {
             ].map((course, idx) => (
               <div
                 key={idx}
-                className="group bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-white p-6 rounded-2xl border border-gray-200 hover:border-[#00809D] hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div
-                  className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
+                  className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform`}
                 >
                   {course.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{course.title}</h3>
-                <p className="text-sm text-blue-200">{course.courses}</p>
+                <h3 className="text-xl font-bold text-[#0a1f44] mb-2">
+                  {course.title}
+                </h3>
+                <p className="text-sm text-gray-600">{course.courses}</p>
               </div>
             ))}
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#00809D] to-cyan-500 opacity-20 blur-3xl animate-pulse"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00809D] to-cyan-500 opacity-20 blur-3xl"></div>
+              <div className="relative bg-white p-8 rounded-3xl border border-gray-200 shadow-2xl">
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <img
-                    src={train}
+                    src={images.train}
                     alt="Training"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />
                   <img
-                    src={excellence}
+                    src={images.excellence}
                     alt="Excellence"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />
                   <img
-                    src={star}
+                    src={images.star}
                     alt="Success"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />
                   <img
-                    src={diamond}
+                    src={images.diamond}
                     alt="Growth"
                     className="rounded-xl aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500 bg-gray-300"
                   />
                 </div>
-                <div className="absolute -top-4 -right-4 bg-white rounded-full px-4 py-2 shadow-xl">
+                <div className="absolute -top-4 -right-4 bg-gradient-to-br from-[#00809D] to-[#0a1f44] text-white rounded-full px-4 py-2 shadow-xl">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-bold text-[#0a1f44]">
-                      1000+ Graduates
-                    </span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-bold">1000+ Graduates</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                <h3 className="text-2xl font-bold mb-4">
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg">
+                <h3 className="text-2xl font-bold text-[#0a1f44] mb-4">
                   Why Choose Our Training?
                 </h3>
                 <div className="space-y-4">
@@ -841,7 +1216,7 @@ export default function B2TechLanding() {
                           d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                         />
                       </svg>
-                      <p className="text-blue-100">{benefit}</p>
+                      <p className="text-gray-700">{benefit}</p>
                     </div>
                   ))}
                 </div>
@@ -858,17 +1233,17 @@ export default function B2TechLanding() {
                 ].map((stat, idx) => (
                   <div
                     key={idx}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20"
+                    className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-4 text-center border border-[#00809D]/20"
                   >
                     <div className="text-2xl font-bold text-[#00809D] mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-xs text-blue-200">{stat.label}</div>
+                    <div className="text-xs text-gray-600">{stat.label}</div>
                   </div>
                 ))}
               </div>
 
-              <button className="w-full bg-white text-[#0a1f44] px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:bg-blue-50 shadow-xl hover:shadow-2xl transform hover:scale-105 flex items-center justify-center gap-2">
+              <button className="w-full bg-gradient-to-r from-[#00809D] to-[#0a1f44] text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:shadow-2xl transform hover:scale-105 flex items-center justify-center gap-2">
                 <Link to="/softwaretraining">Explore Training Programs</Link>
                 <svg
                   className="w-5 h-5"
@@ -901,7 +1276,7 @@ export default function B2TechLanding() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#00809D] px-6 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
-              <Link to="/resumeServices"> Partner With Us</Link>
+              <Link to="/resumeServices">Partner With Us</Link>
             </button>
             <button className="bg-[#0a1f44] text-white border-2 border-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-xl hover:bg-[#0a1f44]/90">
               <Link to="/foundersVision">Find Your Next Role</Link>

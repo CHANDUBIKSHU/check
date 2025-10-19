@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import {
   Eye,
   Lightbulb,
@@ -17,28 +17,32 @@ import {
   Trophy,
   Compass,
   Brain,
+  Search,
+  Code,
+  Palette,
+  Smartphone,
+  TestTube,
+  Figma,
+  Layers,
+  Globe,
+  Briefcase,
+  RotateCcw,
+  Sparkles,
+  DollarSign,
 } from "lucide-react";
-import vision from  '../../../public/AboutImg/vision.jpg';
-import bus from '../../../public/AboutImg/bus.jpg';
-import job1 from  '../../../public/AboutImg/job1.jpg';
-import found from '../../../public/AboutImg/found.jpg';
-import believe from '../../../public/AboutImg/believe.jpg';
-import become from  '../../../public/AboutImg/become.jpg';
-import business from  '../../../public/AboutImg/business.jpg';
-import profes from '../../../public/AboutImg/profes.jpg';
 
 export default function VisionPage() {
   const [scrollY, setScrollY] = useState(0);
 
   const images = {
-    banner: vision,
-    hero1: job1,
-    hero2: bus,
-    vision: found,
-    believe: believe,
-    become: become,
-    businesses: business,
-    professionals: profes,
+    banner: "/AboutImg/vision.jpg",
+    hero1: "/AboutImg/job1.jpg",
+    hero2: "/AboutImg/bus.jpg",
+    vision: "/AboutImg/found.jpg",
+    believe: "/AboutImg/believe.jpg",
+    become: "/AboutImg/become.jpg",
+    businesses: "/AboutImg/business.jpg",
+    professionals: "/AboutImg/profes.jpg",
     integrity:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop",
     excellence:
@@ -72,7 +76,7 @@ export default function VisionPage() {
             <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/30 mb-6">
               <Eye className="w-5 h-5 text-white" />
               <span className="text-xs font-bold text-white tracking-wider">
-                OUR FOUNDER'S VISION
+                OUR CORE VALUES
               </span>
             </div>
 
@@ -85,11 +89,40 @@ export default function VisionPage() {
         </div>
       </section>
 
+      {/* Tagline Carousel */}
+      <section className="py-12 bg-gradient-to-r from-[#00809D] to-[#0a1f44]">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-black text-white mb-2">
+                Your Go-To Partner
+              </h3>
+              <p className="text-white/90 text-sm">
+                For Hiring Excellence in Specialized Tech & Business Domains
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-black text-white mb-2">
+                Our Quality. Your Trust.
+              </h3>
+              <p className="text-white/90 text-sm">That's Our Success Story</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-black text-white mb-2">
+                Don't Just Find a Job
+              </h3>
+              <p className="text-white/90 text-sm">
+                Discover a Future. With Us.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Unsung Heroes Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Content */}
             <div>
               <h2 className="text-4xl md:text-5xl font-black text-[#0a1f44] mb-6 leading-tight">
                 Talent acquisition professionals are often the{" "}
@@ -130,9 +163,7 @@ export default function VisionPage() {
               </div>
             </div>
 
-            {/* Image Composition */}
             <div className="relative h-[450px]">
-              {/* Floating Card Style */}
               <div className="absolute top-0 right-0 w-64 h-64 rounded-3xl overflow-hidden shadow-2xl transform rotate-6 hover:rotate-3 transition-transform duration-500">
                 <img
                   src={images.hero2}
@@ -141,7 +172,6 @@ export default function VisionPage() {
                 />
               </div>
 
-              {/* Main Card */}
               <div className="absolute bottom-0 left-0 w-72 h-80 rounded-3xl overflow-hidden shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white">
                 <img
                   src={images.hero1}
@@ -150,7 +180,6 @@ export default function VisionPage() {
                 />
               </div>
 
-              {/* Stats Badge */}
               <div className="absolute top-1/2 right-4 z-20 bg-white rounded-2xl p-6 shadow-2xl border-2 border-[#00809D]">
                 <div className="text-4xl font-black text-[#00809D] mb-1">
                   10K+
@@ -164,11 +193,66 @@ export default function VisionPage() {
         </div>
       </section>
 
+      {/* Dream Job Section */}
+      <section className="py-20 bg-gradient-to-br from-[#00809D]/10 to-[#0a1f44]/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#00809D] rounded-full mb-6">
+              <Target className="w-6 h-6 text-white" />
+              <span className="text-sm font-black text-white">
+                CAREER ACCELERATION
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0a1f44] mb-6">
+              🎯 Unlock Your Dream Job —{" "}
+              <span className="text-[#00809D]">Starting at Just ₹2000!</span>
+            </h2>
+            <p className="text-xl text-[#0a1f44] opacity-80 max-w-4xl mx-auto leading-relaxed">
+              Whether you're a fresher, mid-level professional, or industry
+              veteran — we'll help you stand out from the crowd and move one
+              step closer to your dream role.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Freshers",
+                icon: <Sparkles className="w-8 h-8" />,
+                desc: "Launch your career with confidence",
+              },
+              {
+                title: "Mid-Level",
+                icon: <TrendingUp className="w-8 h-8" />,
+                desc: "Accelerate your growth trajectory",
+              },
+              {
+                title: "Veterans",
+                icon: <Trophy className="w-8 h-8" />,
+                desc: "Achieve leadership excellence",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 bg-[#00809D] rounded-xl flex items-center justify-center text-white mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="text-2xl font-black text-[#0a1f44] mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-[#0a1f44] opacity-80">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Founder's Vision */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Image with Floating Badge */}
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
@@ -182,7 +266,6 @@ export default function VisionPage() {
               </div>
             </div>
 
-            {/* Content */}
             <div>
               <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#00809D]/10 rounded-full mb-6 border-2 border-[#00809D]">
                 <Brain className="w-6 h-6 text-[#00809D]" />
@@ -244,8 +327,181 @@ export default function VisionPage() {
         </div>
       </section>
 
-      {/* B2 Tech Services Origin */}
+      {/* Areas of Expertise */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#00809D]/10 rounded-full mb-6 border-2 border-[#00809D]">
+              <Code className="w-6 h-6 text-[#00809D]" />
+              <span className="text-sm font-bold text-[#0a1f44]">
+                SPECIALIZED DOMAINS
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0a1f44] mb-6">
+              🔧 Our <span className="text-[#00809D]">Areas of Expertise</span>
+            </h2>
+            <p className="text-xl text-[#0a1f44] opacity-80 max-w-4xl mx-auto leading-relaxed">
+              At B2 Tech Services, we specialize in hiring across a wide
+              spectrum of cutting-edge and in-demand domains. Whether you're
+              scaling your tech team or looking for niche talent, we have the
+              network, knowledge, and experience to deliver the right candidates
+              — fast and efficiently.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#0a1f44] to-[#00809D] rounded-3xl p-12 text-white">
+            <p className="text-xl leading-relaxed text-center mb-8">
+              We recognize that hiring for specialized roles requires more than
+              resumes — it demands deep understanding, speed, and accuracy. We
+              know what it takes to find the perfect fit.
+            </p>
+            <div className="text-center">
+              <span className="text-2xl font-black">
+                Believe in More. Become More. Start Now.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Training Section */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-purple-600 rounded-full mb-6">
+              <Palette className="w-6 h-6 text-white" />
+              <span className="text-sm font-black text-white">
+                UI/UX TRAINING
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0a1f44] mb-6">
+              What You'll Learn
+            </h2>
+            <p className="text-xl text-[#0a1f44] opacity-80 max-w-4xl mx-auto leading-relaxed mb-8">
+              Our hands-on, industry-focused training covers all critical
+              aspects of the design process:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                icon: <Target className="w-8 h-8" />,
+                title: "User Research & Persona Development",
+                color: "bg-purple-600",
+              },
+              {
+                icon: <Brain className="w-8 h-8" />,
+                title: "Information Architecture & Wireframing",
+                color: "bg-blue-600",
+              },
+              {
+                icon: <Layers className="w-8 h-8" />,
+                title: "Interactive Prototyping",
+                color: "bg-indigo-600",
+              },
+              {
+                icon: <TestTube className="w-8 h-8" />,
+                title: "Usability Testing & Iteration",
+                color: "bg-cyan-600",
+              },
+              {
+                icon: <Figma className="w-8 h-8" />,
+                title:
+                  "Mastery of Design Tools (Figma, Adobe XD, Sketch & more)",
+                color: "bg-pink-600",
+              },
+              {
+                icon: <Smartphone className="w-8 h-8" />,
+                title: "Responsive & Mobile-First Design Principles",
+                color: "bg-teal-600",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-2"
+              >
+                <div
+                  className={`w-14 h-14 ${item.color} rounded-xl flex items-center justify-center text-white mb-4`}
+                >
+                  {item.icon}
+                </div>
+                <h3 className="text-lg font-bold text-[#0a1f44]">
+                  {item.title}
+                </h3>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white rounded-3xl p-10 shadow-xl text-center">
+            <p className="text-xl text-[#0a1f44] leading-relaxed mb-6">
+              Whether you're a student, corporate team, or independent
+              professional, our customized programs are tailored to your level
+              and learning goals.
+            </p>
+            <h3 className="text-3xl font-black text-[#00809D]">
+              Empower your career. Elevate your products. Invest in design that
+              delivers — with B2 Tech Services.
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Clients Love Us */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#00809D] rounded-full mb-6">
+              <Trophy className="w-6 h-6 text-white" />
+              <span className="text-sm font-black text-white">
+                CLIENT SUCCESS
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0a1f44] mb-6">
+              🏆 Why Clients{" "}
+              <span className="text-[#00809D]">Love Working With Us</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <Globe className="w-10 h-10" />,
+                title:
+                  "Access to highly qualified resources with 10+ years of domain expertise",
+              },
+              {
+                icon: <Lightbulb className="w-10 h-10" />,
+                title: "Deep understanding of technical and business hiring",
+              },
+              {
+                icon: <Target className="w-10 h-10" />,
+                title: "Focused on outcomes, not just activity",
+              },
+              {
+                icon: <RotateCcw className="w-10 h-10" />,
+                title:
+                  "Agile, scalable, and tailored solutions for every business size and structure",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-gradient-to-br from-[#00809D]/5 to-[#0a1f44]/5 rounded-2xl p-8 hover:shadow-xl transition-all"
+              >
+                <div className="w-16 h-16 bg-[#00809D] rounded-xl flex items-center justify-center text-white mb-4">
+                  {item.icon}
+                </div>
+                <p className="text-[#0a1f44] font-semibold leading-relaxed">
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* B2 Tech Services Origin */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-[#0a1f44] mb-6">
@@ -276,7 +532,6 @@ export default function VisionPage() {
               },
             ].map((item, i) => (
               <div key={i} className="group relative">
-                {/* Polaroid Style Card */}
                 <div className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-2 duration-300">
                   <div className="relative h-64 overflow-hidden">
                     <img
@@ -309,6 +564,26 @@ export default function VisionPage() {
               <span className="text-[#00809D]">changes everything</span>.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Innovation Section */}
+      <section className="py-20 bg-gradient-to-br from-[#0a1f44] to-[#00809D] text-white">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/10 backdrop-blur-xl rounded-full border border-white/30 mb-8">
+            <Rocket className="w-6 h-6" />
+            <span className="text-sm font-black tracking-wider">
+              INNOVATION DRIVEN
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-black mb-6">
+            Continuous Innovation, Constant Evolution
+          </h2>
+          <p className="text-xl opacity-90 max-w-4xl mx-auto leading-relaxed">
+            Innovation is in our DNA. We stay ahead of industry trends to
+            continuously expand our offerings, helping you navigate complex,
+            technology-driven challenges with agility and confidence.
+          </p>
         </div>
       </section>
 
@@ -386,7 +661,6 @@ export default function VisionPage() {
             </p>
           </div>
 
-          {/* Core Values Grid */}
           <div className="grid md:grid-cols-3 gap-8 mt-16">
             {[
               {
@@ -406,7 +680,6 @@ export default function VisionPage() {
               },
             ].map((value, i) => (
               <div key={i} className="group">
-                {/* Magazine Style Layout */}
                 <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                   <div className="relative h-56 overflow-hidden">
                     <img
@@ -464,12 +737,12 @@ export default function VisionPage() {
               create lasting value that transforms industries.
             </p>
 
-            <button className="px-10 py-4 bg-[#00809D] text-white rounded-full text-lg font-black shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-3 group">
-              <span>
-                <Link to="/softwareTraining">Start Your Journey</Link>
-              </span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            <Link to="/softwareTraining">
+              <button className="px-10 py-4 bg-[#00809D] text-white rounded-full text-lg font-black shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all inline-flex items-center gap-3 group">
+                <span>Start Your Journey</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
           </div>
         </div>
       </section>
