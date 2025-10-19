@@ -4,6 +4,7 @@ import { Users, Award, Smile } from "lucide-react";
 import Navbar from "../../components/Navbar";
 import { Link } from "react-router-dom";
 import bgImage from './hu.jpg';
+import pix from "../../../public/AboutImg/pexels-thirdman-7993891.jpg"
 
 function Counter({ from = 0, to }) {
   const count = useMotionValue(from);
@@ -71,7 +72,7 @@ function Herosection() {
 
 
           <motion.h1
-  className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-teal-400 via-purple-400 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]"
+  className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-white via-purple-400 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(147,51,234,0.5)]"
   initial={{ opacity: 0, x: -50 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 0.8, delay: 0.2 }}
@@ -149,7 +150,10 @@ function Herosection() {
             </div>
           </motion.div>
 
-
+          {/* Right Side Stats */}
+          <div className="flex flex-col gap-2">
+           
+          </div>
         </div>
       </section>
     </div>
