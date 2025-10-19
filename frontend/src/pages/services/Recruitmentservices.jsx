@@ -15,7 +15,9 @@ const RecruitmentPage = () => {
       <div>
         <Nav/>
       </div>
-     <Hero/>
+     <div style={{marginTop:'20px'}}>
+      <Hero/>
+     </div>
      {/* <InfographicStats/>
      <ProcessFlow/>
      <SplitShowcase/>

@@ -37,7 +37,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/Expertise" element={<Expertise />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/companyPhilosophy" element={<Companyphilosophy />} />
+          <Route path="/About Us" element={<Companyphilosophy />} />
           <Route path="/coreValues" element={<Corevalues />} />
           <Route path="/foundersVision" element={<Founder />} />
           <Route path="/growthJourney" element={<Growth />} />

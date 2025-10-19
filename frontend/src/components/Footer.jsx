@@ -93,8 +93,8 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/companyPhilosophy" className="hover:text-[#00809D] transition">
-                  Company Philosophy
+                <Link to="/About Us" className="hover:text-[#00809D] transition">
+                  About Us
                 </Link>
               </li>
               <li>
